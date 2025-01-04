@@ -15,4 +15,3 @@ $router = new Router;
 require_once $fileRoot.DIRECTORY_SEPARATOR.'src'.DIRECTORY_SEPARATOR.'routes.php';
 
 $router->handleRequest();
-?>

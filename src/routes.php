@@ -25,7 +25,7 @@ $router->addRoute('post', '/login', function() use($routesDir) {
         $username = $_POST['username'];
         $password = $_POST['password'];
     } else {
-        echo json_encode(array("status" => "error", "message" => "Invalid data"));
+        echo json_encode(["status" => "error", "message" => "Invalid data"]);
         return;
     }
 
@@ -43,23 +43,30 @@ $router->addRoute('post', '/login', function() use($routesDir) {
     ];
 
     $ch = curl_init();
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 1);
     curl_setopt_array($ch, $options);
     $response = curl_exec($ch);
 
-    // Get the headers from the response
-    $headers = curl_getinfo($ch, CURLINFO_HEADER_OUT);
-    curl_close($ch);
+    $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+    $header = substr($response, 0, $header_size);
+    $body = substr($response, $header_size);
     
-    $response = substr($response, 5469, -565);
+    $response = substr($body, 5469, -565);
 
     if($response === "<div class=\"alert alert-danger\">Sorry wrong username and password combination entered.</div>"){
         echo json_encode(array("status" => "error", "message" => "Incorrect username / password combination."));
     } else if ($response === "You are connected") {
         // Extract PHPSESSID from the response headers
-        print_r($headers);
-        // $session_id = $matches[1] ?? null;
+        preg_match('/PHPSESSID=([a-zA-Z0-9]+);/', $header, $matches);
+        $session_id = $matches[1] ?? null;
 
-        echo json_encode(array("status" => "success", "session" => 'f'));
+        // Set the session cookie
+        if ($session_id) {
+            setcookie("session", $session_id, time() + (30 * 24 * 60 * 60), "/", "", false, true);
+        }
+
+        echo json_encode(array("status" => "success"));
     } else {
         echo json_encode(array("status" => "error", "message" => "An error has occurred. Pinpoint has had an update breaking out system. Please try again later or use the original site."));
     }
@@ -68,4 +75,50 @@ $router->addRoute('post', '/login', function() use($routesDir) {
 // Dashboard 
 $router->addRoute('get', '/dashboard', function() use($routesDir) {
     include_once $routesDir.'dashboard.html';
+});
+
+// API for getting user infomation
+$router->addRoute('get', '/user', function() use($routesDir) {
+    // Check if the post data contains 'username' and 'password'
+    if (isset($_COOKIE['session'])) {
+        $session = $_COOKIE['session'];
+    } else {
+        echo json_encode(["status" => "error", "message" => "Invalid session"]);
+        return;
+    }
+
+    $url = "https://www.pinpointlearning.co.uk/mainn.php";
+
+    $options = [
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST => true,
+        CURLOPT_HTTPHEADER => [
+            "content-type: application/x-www-form-urlencoded",
+        ],
+        CURLOPT_COOKIE => "PHPSESSID=$session",
+    ];
+    
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 1);
+    curl_setopt_array($ch, $options);
+    $response = curl_exec($ch);
+
+    $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+    $header = substr($response, 0, $header_size);
+    $body = substr($response, $header_size);
+
+    curl_close($ch);
+
+    if(strlen($body) === 280) {
+        echo json_encode(["status"=> "error","message"=> "Please login"]);
+    }
+
+    preg_match('/^(.*?)<\/h1>/', substr($body, 3002), $matches);
+    $nameStr = $matches[1];
+    $names = explode(' ', $nameStr);
+
+    echo json_encode(array("status" => "success", "fname" => ucfirst(strtolower($names[1])), "lname" => ucfirst(strtolower($names[0]))));
 });

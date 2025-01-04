@@ -178,7 +178,7 @@
         }).then(data => {
             const response = JSON.parse(data);
             if (response.status === "success") {
-                // window.location.href = '/dashboard?login='+response.session;
+                window.location.href = '/dashboard';
             } else {
                 document.getElementById('error-msg').innerText = response.message;
             }
