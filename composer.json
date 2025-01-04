@@ -1,0 +1,16 @@
+{
+    "name": "mjdawson/jab-point",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Mjdawson\\JabPoint\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mjdawson",
+            "email": "max@mjdawson.net"
+        }
+    ],
+    "require": {}
+}

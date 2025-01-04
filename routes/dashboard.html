@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinpoint Learning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* General Body Styling */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #1A1A1A;
+      color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      width: 100%;
+      background-color: #121212;
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    .navbar a {
+      color: #f1f1f1;
+      text-decoration: none;
+      font-size: 18px;
+      margin: 0 20px;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    .navbar a:hover {
+      color: #00aaff;
+    }
+
+    .navbar .menu-toggle {
+      display: none;
+    }
+
+    .navbar a.active {
+      color: #00aaff;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .navbar a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .navbar .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        margin: 0 auto;
+      }
+
+      .navbar.responsive a {
+        display: block;
+        text-align: left;
+      }
+    }
+
+    /* Home Content */
+    .home-container {
+      margin-top: 80px;
+      background-color: #121212;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 800px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #ffffff;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background-color: #333;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 10px;
+      display: inline-block;
+      width: 23%;
+      text-align: center;
+      color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card h2 {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .card a {
+      color: #00aaff;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      color: #0088cc;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .card {
+        width: 45%;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        width: 90%;
+      }
+
+      .navbar {
+        padding: 10px 0;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+  </style>
+</head>
+<body role="document">
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <span class="menu-toggle" onclick="toggleNav()">☰</span>
+    <a href="/dashboard" class="active">Home</a>
+    <a href="date2.php">Input your test scores</a>
+    <a href="howtos.php">How To Videos</a>
+    <a href="contacttt.php">Contact</a>
+    <a href="logout2.php">Log out</a>
+  </nav>
+
+  <!-- Home Content -->
+  <div class="home-container">
+    <h1>Pinpoint Learning</h1>
+    <h2>Individually Targetted GCSE and KS2 Resources with Real Maths and Real Results</h2>
+
+    <div class="card">
+      <a href="https://www.pinpointlearning.co.uk/indexschool.php">
+        <h2>SECONDARY<br>SCHOOLS</h2>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="https://www.pinpointlearning.co.uk/index_primary.php">
+        <h2>YEAR 6<br>PRIMARY SCHOOLS</h2>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="https://www.pinpointlearning.co.uk/index_secondaryparent.php">
+        <h2>PARENTS<br>GCSE</h2>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="https://www.pinpointlearning.co.uk/Plus.php">
+        <h2>PARENTS<br>*NEW* 11 Plus</h2>
+      </a>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleNav() {
+      var navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('responsive');
+    }
+  </script>
+
+</body>
+</html>

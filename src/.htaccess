@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Allow access to assets folder
+RewriteRule ^assets/ - [L]
+
+# Block access to all other PHP files, except index.php
+RewriteCond %{REQUEST_URI} !^/index.php$
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^.*\.php$ - [F,L]
+
+# Rewrite all other requests to index.php
+RewriteRule ^(.*)$ index.php [QSA,L]
