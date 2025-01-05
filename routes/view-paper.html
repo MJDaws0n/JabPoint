@@ -199,7 +199,37 @@
     }
     
     .btn:hover {
-      background-color: #0088cc;
+        background-color: #0088cc;
+    }
+
+    table.table.table-bordered {
+        width: 100%;
+
+        thead:nth-child(1) {
+            background-color: #1d1d1d;
+            color: white;
+        }
+        th:nth-child(1) {
+            background-color: #1d1d1d;
+        }
+    }
+
+    div#topics-table a:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+      padding: 10px 0;
+    }
+    div#topics-table{
+      padding: 40px 0;
+      text-align: left;
+    }
+    div#topics-table a{
+      text-decoration: none;
+      background-color: #1d1d1d;
+      padding: 10px 0 10px 5px;
     }
 
   </style>
@@ -218,82 +248,101 @@
 
   <!-- Home Content -->
   <div class="home-container">
-    <h1>Hi, <b id="name" style="color: #ffffff73;">LOADING...</b></h1>
-    <h2><a href="/upload">Enter paper marks here</a> or choose a past paper to access your personalised questions and solutions.</h2>
-    <select name="past-papers" id="past-papers" disabled="true">
-        <option id="wait" value="wait">Please wait...</option>
-    </select>
-    <button id="review-paper" style="display: none;" class="btn">Review paper</button>
+    <h1><b id="name" style="color: #ffffff73;">LOADING...</b></h1>
+    <h2 id="page-content">Please wait.</h2>
+    <div id="score-table"></div><br>
+    <h2>Personalised topics</h2>
+    <div id="topics-table"></div>
+    <h2>Personalised Question Booklet</h2>
+    <button id="download-booklet" class="btn">Download</button>
   </div>
 
   <script>
+    const url = new URL(window.location.href);
+
+    // Get the query string parameters
+    const queryParams = new URLSearchParams(url.search);
+
     function toggleNav() {
-      var navbar = document.querySelector('.navbar');
-      navbar.classList.toggle('active');
+        var navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('active');
     }
 
-    // Get the cached user data
-    let user = null;
+    // Page cache
+    let paper = null;
     try {
-        user = JSON.parse(getCookie('user_cache'));
+        console.log(getCookie('paper_cache_' + queryParams.get('id')));
+        paper = JSON.parse(getCookie('paper_cache_' + queryParams.get('id')));
     } catch (error) {
         console.error("Invalid JSON:", error);
     }
 
-    if (user) {
-        document.getElementById('name').innerHTML = user.fname;
+    if (paper) {
+        // Show total marks
+        document.querySelector('#page-content').textContent = `Total marks: ${paper.marks}`;
 
-        user.papers.forEach((name, index) => {
-            const option = document.createElement('option');
-            option.value = user.paperValues[index];
-            option.textContent = formatPaperStr(name);
-            document.querySelector('#past-papers').appendChild(option);
-        });
-        document.querySelector('#past-papers').disabled = false;
-        document.querySelector('#wait').remove();
+        // Show table
+        document.querySelector('#score-table').innerHTML = `${paper.table}`;
+
+        // Show topics table
+        let i = 0;
+        for (const topic of paper.topics) {
+            const topicValue = document.createElement('a');
+            topicValue.textContent = topic;
+            if (paper.topicLinks[i] !== 'no_video.php'){
+              topicValue.href = paper.topicLinks[i];
+              topicValue.target = '_blank';
+            } else{
+              topicValue.addEventListener('click', () => {
+                alert('No video available for this topic.');
+              });
+
+              topicValue.style.cursor = 'not-allowed';
+            }
+            document.querySelector('#topics-table').appendChild(topicValue);
+            i++;
+        }
     }
 
-    // Ping our API to get pinpoint first and last name
-    fetch('/user')
-        .then(response => response.json())
-        .then(data => {
-            setCookie('user_cache', JSON.stringify(data), 30);
-            document.getElementById('name').textContent = data.fname;
-            document.getElementById('name').style.color = 'white';
+    // Get the paper name
+    var nameConainer = document.getElementById('name');
 
-            const storedValue = document.querySelector('#past-papers').value;
-            document.querySelector('#past-papers').innerHTML = '';
-            data.papers.forEach((name, index) => {
-                const option = document.createElement('option');
-                option.value = data.paperValues[index];
-                option.textContent = formatPaperStr(name);
-                document.querySelector('#past-papers').appendChild(option);
-            });
-            document.querySelector('#past-papers').disabled = false;
-            if(document.querySelector('#wait')){
-                document.querySelector('#wait').remove();
-            }
-            if(storedValue){
-                document.querySelector('#past-papers').value = storedValue;
+    // Temporarily set paper name to the one in the id query
+    nameConainer.textContent = formatPaperStr(queryParams.get('id'));
+
+    // Ping our API to get pinpoint paper infomation
+    fetch('/paper?paper=' + queryParams.get('id'))
+        .then(response => response.json())
+        .then(paper => {
+            setCookie('paper_cache_'+queryParams.get('id'), JSON.stringify(paper), 30);
+            nameConainer.style.color = 'white';
+
+            // Show total marks
+            document.querySelector('#page-content').textContent = `Total marks: ${paper.marks}`;
+
+            // Show table
+            document.querySelector('#score-table').innerHTML = `${paper.table}`;
+
+            // Show topics table
+            let i = 0;
+            for (const topic of paper.topics) {
+                const topicValue = document.createElement('a');
+                topicValue.textContent = topic;
+                if (paper.topicLinks[i] !== 'no_video.php'){
+                  topicValue.href = paper.topicLinks[i];
+                  topicValue.target = '_blank';
+                } else{
+                  topicValue.addEventListener('click', () => {
+                    alert('No video available for this topic.');
+                  });
+
+                  topicValue.style.cursor = 'not-allowed';
+                }
+                document.querySelector('#topics-table').appendChild(topicValue);
+                i++;
             }
     })
     .catch(error => console.error('Error:', error));
-
-    document.querySelector('#past-papers').addEventListener('change', (event) => {
-        if(document.querySelector('#past-papers').value !== 'two'){
-            document.querySelector('#review-paper').style.display = 'block';
-        } else{
-            document.querySelector('#review-paper').style.display = 'none';
-        }
-    });
-
-    document.querySelector('#review-paper').addEventListener('click', (event) => {
-        const paper = document.querySelector('#past-papers').value;
-
-        if(paper !== 'two'){
-            window.location.href = `/paper-view/?id=${paper}`;
-        }
-    });
 
     function setCookie(name, value, days) {
         const date = new Date();
@@ -332,8 +381,6 @@
 
         return str;
     }
-
-
   </script>
 
 </body>

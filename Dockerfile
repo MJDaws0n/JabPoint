@@ -2,7 +2,7 @@
 FROM php:8.2-apache
 
 # Accept APP_ENV argument
-ARG APP_ENV=production
+ARG APP_ENV=development
 
 # Install required libraries, enable GD with WebP support, and install Composer
 RUN apt-get update && apt-get install -y \
