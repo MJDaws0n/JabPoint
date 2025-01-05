@@ -83,6 +83,10 @@
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
       width: 100%;
       max-width: 800px;
+
+      max-height: 600px;
+      overflow-y: scroll;
+      scrollbar-color: #1d1d1d #121212;
     }
 
     h1 {
@@ -163,13 +167,14 @@
       }
     }
 
-    #past-papers {
+    select, input {
       /* Reset */
       appearance: none;
       line-height: normal;
       position: relative;
       background-position: right 10px top 50%;
       background-repeat: no-repeat;
+      box-sizing: border-box;
 
       width: 100%;
       border-radius: 4px;
@@ -181,7 +186,7 @@
       margin-bottom: 20px;
     }
 
-    #past-papers:focus{
+    select:focus, input:focus {
       outline: none;
       border: 1px solid white;
     }
@@ -199,7 +204,37 @@
     }
     
     .btn:hover {
-      background-color: #0088cc;
+        background-color: #0088cc;
+    }
+
+    table.table.table-bordered {
+        width: 100%;
+
+        thead:nth-child(1) {
+            background-color: #1d1d1d;
+            color: white;
+        }
+        th:nth-child(1) {
+            background-color: #1d1d1d;
+        }
+    }
+
+    div#topics-table a:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+      padding: 10px 0;
+    }
+    div#topics-table{
+      padding: 40px 0;
+      text-align: left;
+    }
+    div#topics-table a{
+      text-decoration: none;
+      background-color: #1d1d1d;
+      padding: 10px 0 10px 5px;
     }
 
   </style>
@@ -209,8 +244,8 @@
   <!-- Navigation -->
   <nav class="navbar">
     <span class="menu-toggle" onclick="toggleNav()">☰</span>
-    <a href="/dashboard" class="active">Home</a>
-    <a href="/upload">Input your test scores</a>
+    <a href="/dashboard">Home</a>
+    <a href="/upload" class="active">Input your test scores</a>
     <a href="/howto">How To Videos</a>
     <a href="/contact">Contact</a>
     <a href="/logout">Log out</a>
@@ -218,82 +253,50 @@
 
   <!-- Home Content -->
   <div class="home-container">
-    <h1>Hi, <b id="name" style="color: #ffffff73;">LOADING...</b></h1>
-    <h2><a href="/upload">Enter paper marks here</a> or choose a past paper to access your personalised questions and solutions.</h2>
-    <select name="past-papers" id="past-papers" disabled="true">
-        <option id="wait" value="wait">Please wait...</option>
+    <h1><b id="name">Upload Results</b></h1>
+    <h2>Year group</h2>
+    <select name="year-group" id="year-group">
+        <option value="11">11</option>
+        <option value="10">10</option>
+        <option value="9">9</option>
+        <option value="8">8</option>
+        <option value="7">7</option>
+        <option value="6">6</option>
+        <option value="5">5</option>
     </select>
-    <button id="review-paper" style="display: none;" class="btn">Review paper</button>
+
+    <h2>Test Type</h2>
+    <select name="test-type" id="test-type">
+        <option value="formal">Formal Test - this test was done in full test conditions and marked by a teacher</option>
+        <option value="practice">Practise practise paper - This test was not done in test conditions. </option>
+    </select>
+
+    <h2>Test Date</h2>
+    <input type="date" id="start" name="trip-start" value="" />
+    <script>
+        const currentYear = new Date().getFullYear();
+        const previousYear = currentYear - 1;
+        const minDate = `${previousYear}-01-01`;
+        const maxDate = `${currentYear}-12-31`;
+
+        const dateInput = document.getElementById("start");
+        dateInput.min = minDate;
+        dateInput.max = maxDate;
+    </script>
   </div>
 
   <script>
+    const url = new URL(window.location.href);
+
+    // Get the query string parameters
+    const queryParams = new URLSearchParams(url.search);
+
     function toggleNav() {
-      var navbar = document.querySelector('.navbar');
-      navbar.classList.toggle('active');
+        var navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('active');
     }
 
-    // Get the cached user data
-    let user = null;
-    try {
-        user = JSON.parse(getCookie('user_cache'));
-    } catch (error) {
-        console.error("Invalid JSON:", error);
-    }
 
-    if (user) {
-        document.getElementById('name').innerHTML = user.fname;
-
-        user.papers.forEach((name, index) => {
-            const option = document.createElement('option');
-            option.value = user.paperValues[index];
-            option.textContent = formatPaperStr(name);
-            document.querySelector('#past-papers').appendChild(option);
-        });
-        document.querySelector('#past-papers').disabled = false;
-        document.querySelector('#wait').remove();
-    }
-
-    // Ping our API to get pinpoint first and last name
-    fetch('/user')
-        .then(response => response.json())
-        .then(data => {
-            setCookie('user_cache', JSON.stringify(data), 30);
-            document.getElementById('name').textContent = data.fname;
-            document.getElementById('name').style.color = 'white';
-
-            const storedValue = document.querySelector('#past-papers').value;
-            document.querySelector('#past-papers').innerHTML = '';
-            data.papers.forEach((name, index) => {
-                const option = document.createElement('option');
-                option.value = data.paperValues[index];
-                option.textContent = formatPaperStr(name);
-                document.querySelector('#past-papers').appendChild(option);
-            });
-            document.querySelector('#past-papers').disabled = false;
-            if(document.querySelector('#wait')){
-                document.querySelector('#wait').remove();
-            }
-            if(storedValue){
-                document.querySelector('#past-papers').value = storedValue;
-            }
-    })
-    .catch(error => console.error('Error:', error));
-
-    document.querySelector('#past-papers').addEventListener('change', (event) => {
-        if(document.querySelector('#past-papers').value !== 'two'){
-            document.querySelector('#review-paper').style.display = 'block';
-        } else{
-            document.querySelector('#review-paper').style.display = 'none';
-        }
-    });
-
-    document.querySelector('#review-paper').addEventListener('click', (event) => {
-        const paper = document.querySelector('#past-papers').value;
-
-        if(paper !== 'two'){
-            window.location.href = `/paper-view/?id=${paper}`;
-        }
-    });
 
     function setCookie(name, value, days) {
         const date = new Date();
@@ -332,8 +335,6 @@
 
         return str;
     }
-
-
   </script>
 
 </body>

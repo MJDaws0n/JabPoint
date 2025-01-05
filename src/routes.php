@@ -280,7 +280,90 @@ $router->addRoute('get', '/paper', function() use($routesDir) {
     echo json_encode(["status" => "success", "table" => $table, "marks" => $marks, "topics" => $topicNames, "topicLinks" => $topicLinks]);
 });
 
+// API for downloading personal booklet
+$router->addRoute('get', '/booklet', function() use($routesDir) {
+    header('Content-Type: application/json; charset=utf-8');
+
+
+    // You MUST first ping the paper page as it's the only way
+    if (isset($_COOKIE['session'])) {
+        $session = $_COOKIE['session'];
+    } else {
+        echo json_encode(["status" => "error", "message" => "Invalid session"]);
+        return;
+    }
+
+    // Get paper is set
+    if (isset($_GET['paper'])) {
+        $paper = $_GET['paper'];
+    } else {
+        echo json_encode(["status" => "error", "message" => "Invalid paper"]);
+        return;
+    }
+
+    $url = "https://www.pinpointlearning.co.uk/Questions_newwer.php?slick=1&cc=1&AOtype=AO1";
+
+    $data = "dropdown=".$paper;
+
+    $options = [
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POSTFIELDS => $data,
+        CURLOPT_POST => true,
+        CURLOPT_HTTPHEADER => [
+            "content-type: application/x-www-form-urlencoded",
+        ],
+        CURLOPT_COOKIE => "PHPSESSID=$session",
+    ];
+    
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 1);
+    curl_setopt_array($ch, $options);
+    $response = curl_exec($ch);
+
+    $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+    $header = substr($response, 0, $header_size);
+    $body = substr($response, $header_size);
+
+    curl_close($ch);
+
+    if(strlen($body) === 280) {
+        echo json_encode(["status"=> "error","message"=> "Please login"]);
+        return;
+    }
+
+    // Force download
+    $url = 'https://www.pinpointlearning.co.uk/testpdf_newer.php';
+
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_COOKIE, "PHPSESSID=$session");
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+    $response = curl_exec($ch);
+    curl_close($ch);
+
+    if ($response) {
+        // Set headers to trigger file download in the browser
+        header('Content-Type: application/pdf');
+        header('Content-Disposition: attachment; filename="PinPoint(JabPoint)_paper_'.$paper.'.pdf"');
+        echo $response;
+    } else {
+        echo json_encode(["status" => "error"]);
+    }
+});
+
 // View paper
 $router->addRoute('get', '/paper-view', function() use($routesDir) {
     include_once $routesDir.'view-paper.html';
+});
+
+// Upload
+$router->addRoute('get', '/upload', function() use($routesDir) {
+    include_once $routesDir.'upload.html';
 });

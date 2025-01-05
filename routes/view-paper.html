@@ -83,6 +83,10 @@
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
       width: 100%;
       max-width: 800px;
+
+      max-height: 600px;
+      overflow-y: scroll;
+      scrollbar-color: #1d1d1d #121212;
     }
 
     h1 {
@@ -240,10 +244,10 @@
   <nav class="navbar">
     <span class="menu-toggle" onclick="toggleNav()">☰</span>
     <a href="/dashboard" class="active">Home</a>
-    <a href="date2.php">Input your test scores</a>
-    <a href="howtos.php">How To Videos</a>
-    <a href="contacttt.php">Contact</a>
-    <a href="logout2.php">Log out</a>
+    <a href="/upload">Input your test scores</a>
+    <a href="/howto">How To Videos</a>
+    <a href="/contact">Contact</a>
+    <a href="/logout">Log out</a>
   </nav>
 
   <!-- Home Content -->
@@ -255,6 +259,8 @@
     <div id="topics-table"></div>
     <h2>Personalised Question Booklet</h2>
     <button id="download-booklet" class="btn">Download</button>
+    <h2>Solutions</h2>
+    <button id="solutions" class="btn">Not avaiable atm</button>
   </div>
 
   <script>
@@ -286,6 +292,7 @@
 
         // Show topics table
         let i = 0;
+        document.querySelector('#topics-table').innerHTML = '';
         for (const topic of paper.topics) {
             const topicValue = document.createElement('a');
             topicValue.textContent = topic;
@@ -303,6 +310,45 @@
             i++;
         }
     }
+
+
+    document.getElementById('download-booklet').addEventListener('click', () => {
+        // Disable button
+        document.getElementById('download-booklet').disabled = true;
+        document.getElementById('download-booklet').textContent = 'Downloading from pinpoint servers (this may take a while)...';
+        document.getElementById('download-booklet').style.cursor = 'not-allowed';
+
+        // Download file
+        {
+          const id = queryParams.get('id');
+          const url = '/booklet?paper=' + id;
+
+          // Use Fetch to check if the file request is successful
+          fetch(url)
+            .then(response => {
+              if (response.ok) {
+                // File found, now trigger the download
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = '';  // Optionally set a default filename
+                a.style.display = 'none';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+
+                document.getElementById('download-booklet').disabled = false;
+                document.getElementById('download-booklet').textContent = 'Downloading to your computer (we don\'t know when this is done)...';
+                document.getElementById('download-booklet').style.cursor = 'pointer';
+                
+                // Callback when download starts
+                console.log('Download initiated');
+              } else {
+                console.log('Failed to find the file.');
+              }
+            })
+            .catch(error => console.log('Error during the download request:', error));
+        }
+    });
 
     // Get the paper name
     var nameConainer = document.getElementById('name');
@@ -325,6 +371,7 @@
 
             // Show topics table
             let i = 0;
+            document.querySelector('#topics-table').innerHTML = '';
             for (const topic of paper.topics) {
                 const topicValue = document.createElement('a');
                 topicValue.textContent = topic;
