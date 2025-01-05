@@ -56,9 +56,9 @@
     }
 
     /* Mobile Responsiveness */
-    @media (max-width: 768px) {
+    @media (max-width: 850px) {
       .navbar a {
-        display: block;
+        display: none;
         margin: 10px 0;
       }
 
@@ -69,9 +69,8 @@
         margin: 0 auto;
       }
 
-      .navbar.responsive a {
+      .navbar.active a {
         display: block;
-        text-align: left;
       }
     }
 
@@ -98,6 +97,9 @@
       color: #ffffff;
       margin-top: 0;
       margin-bottom: 30px;
+    }
+    a{
+      color: white;
     }
 
     .card {
@@ -133,7 +135,7 @@
     }
 
     /* Mobile Responsiveness */
-    @media (max-width: 768px) {
+    @media (max-width: 850px) {
       .card {
         width: 45%;
       }
@@ -177,40 +179,25 @@
 
   <!-- Home Content -->
   <div class="home-container">
-    <h1>Pinpoint Learning</h1>
-    <h2>Individually Targetted GCSE and KS2 Resources with Real Maths and Real Results</h2>
-
-    <div class="card">
-      <a href="https://www.pinpointlearning.co.uk/indexschool.php">
-        <h2>SECONDARY<br>SCHOOLS</h2>
-      </a>
-    </div>
-
-    <div class="card">
-      <a href="https://www.pinpointlearning.co.uk/index_primary.php">
-        <h2>YEAR 6<br>PRIMARY SCHOOLS</h2>
-      </a>
-    </div>
-
-    <div class="card">
-      <a href="https://www.pinpointlearning.co.uk/index_secondaryparent.php">
-        <h2>PARENTS<br>GCSE</h2>
-      </a>
-    </div>
-
-    <div class="card">
-      <a href="https://www.pinpointlearning.co.uk/Plus.php">
-        <h2>PARENTS<br>*NEW* 11 Plus</h2>
-      </a>
-    </div>
+    <h1>Hi, <b id="name" style="color: #ffffff73;">LOADING...</b></h1>
+    <h2><a href="/upload">Enter paper marks here</a> or choose a past paper to access your personalised questions and solutions.</h2>
 
   </div>
 
   <script>
     function toggleNav() {
       var navbar = document.querySelector('.navbar');
-      navbar.classList.toggle('responsive');
+      navbar.classList.toggle('active');
     }
+
+    // Ping our API to get pinpoint first and last name
+    fetch('/user')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('name').textContent = data.fname;
+      document.getElementById('name').style.color = 'white';
+    })
+    .catch(error => console.error('Error:', error));
   </script>
 
 </body>
