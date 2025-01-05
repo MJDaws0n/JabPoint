@@ -163,6 +163,29 @@
       }
     }
 
+    #past-papers {
+      /* Reset */
+      appearance: none;
+      line-height: normal;
+      position: relative;
+      background-position: right 10px top 50%;
+      background-repeat: no-repeat;
+
+      width: 100%;
+      border-radius: 4px;
+      height: 30px;
+      background-color: rgb(18, 18, 18);
+      border: white 1px solid;
+      color: white;
+      text-align: center;
+      padding: 5px;
+    }
+
+    #past-papers:focus{
+      outline: none;
+      border: 1px solid white;
+    }
+
   </style>
 </head>
 <body role="document">
@@ -181,7 +204,12 @@
   <div class="home-container">
     <h1>Hi, <b id="name" style="color: #ffffff73;">LOADING...</b></h1>
     <h2><a href="/upload">Enter paper marks here</a> or choose a past paper to access your personalised questions and solutions.</h2>
-
+    <select name="past-papers" id="past-papers">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
   </div>
 
   <script>
