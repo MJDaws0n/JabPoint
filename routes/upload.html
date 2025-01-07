@@ -1,347 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pinpoint Learning</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    /* General Body Styling */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #1A1A1A;
-      color: #f1f1f1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    /* Navbar */
-    .navbar {
-      width: 100%;
-      background-color: #121212;
-      padding: 15px 0;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      text-align: center;
-    }
-
-    .navbar a {
-      color: #f1f1f1;
-      text-decoration: none;
-      font-size: 18px;
-      margin: 0 20px;
-      padding: 10px;
-      display: inline-block;
-    }
-
-    .navbar a:hover {
-      color: #00aaff;
-    }
-
-    .navbar .menu-toggle {
-      display: none;
-    }
-
-    .navbar a.active {
-      color: #00aaff;
-    }
-
-    /* Mobile Responsiveness */
-    @media (max-width: 850px) {
-      .navbar a {
-        display: none;
-        margin: 10px 0;
-      }
-
-      .navbar .menu-toggle {
-        display: block;
-        font-size: 24px;
-        cursor: pointer;
-        margin: 0 auto;
-      }
-
-      .navbar.active a {
-        display: block;
-      }
-    }
-
-    /* Home Content */
-    .home-container {
-      margin-top: 80px;
-      background-color: #121212;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-      width: 100%;
-      max-width: 800px;
-
-      max-height: 600px;
-      overflow-y: scroll;
-      scrollbar-color: #1d1d1d #121212;
-    }
-
-    h1 {
-      font-size: 36px;
-      font-weight: 600;
-      color: #ffffff;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: 24px;
-      color: #ffffff;
-      margin-top: 0;
-      margin-bottom: 30px;
-    }
-    a{
-      color: white;
-    }
-
-    .card {
-      background-color: #333;
-      border-radius: 15px;
-      padding: 20px;
-      margin: 10px;
-      display: inline-block;
-      width: 23%;
-      text-align: center;
-      color: #ffffff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .card h2 {
-      margin-top: 10px;
-      font-size: 18px;
-    }
-
-    .card a {
-      color: #00aaff;
-      font-size: 16px;
-      text-decoration: none;
-    }
-
-    .card a:hover {
-      color: #0088cc;
-    }
-
-    /* Mobile Responsiveness */
-    @media (max-width: 850px) {
-      .card {
-        width: 45%;
-      }
-
-      h1 {
-        font-size: 28px;
-      }
-
-      h2 {
-        font-size: 20px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .card {
-        width: 90%;
-      }
-
-      .navbar {
-        padding: 10px 0;
-      }
-
-      h1 {
-        font-size: 24px;
-      }
-    }
-
-    select, input {
-      /* Reset */
-      appearance: none;
-      line-height: normal;
-      position: relative;
-      background-position: right 10px top 50%;
-      background-repeat: no-repeat;
-      box-sizing: border-box;
-
-      width: 100%;
-      border-radius: 4px;
-      background-color: rgb(18, 18, 18);
-      border: white 1px solid;
-      color: white;
-      text-align: center;
-      padding: 14px;
-      margin-bottom: 20px;
-    }
-
-    select:focus, input:focus {
-      outline: none;
-      border: 1px solid white;
-    }
-
-    .btn {
-      width: 100%;
-      padding: 14px;
-      background-color: #00aaff;
-      border: none;
-      border-radius: 8px;
-      color: #fff;
-      font-size: 18px;
-      cursor: pointer;
-      margin-bottom: 12px;
-    }
-    
-    .btn:hover {
-        background-color: #0088cc;
-    }
-
-    table.table.table-bordered {
-        width: 100%;
-
-        thead:nth-child(1) {
-            background-color: #1d1d1d;
-            color: white;
-        }
-        th:nth-child(1) {
-            background-color: #1d1d1d;
-        }
-    }
-
-    div#topics-table a:after {
-      content: ".";
-      display: block;
-      height: 0;
-      clear: both;
-      visibility: hidden;
-      padding: 10px 0;
-    }
-    div#topics-table{
-      padding: 40px 0;
-      text-align: left;
-    }
-    div#topics-table a{
-      text-decoration: none;
-      background-color: #1d1d1d;
-      padding: 10px 0 10px 5px;
-    }
-
-  </style>
-</head>
-<body role="document">
-
-  <!-- Navigation -->
-  <nav class="navbar">
-    <span class="menu-toggle" onclick="toggleNav()">☰</span>
-    <a href="/dashboard">Home</a>
-    <a href="/upload" class="active">Input your test scores</a>
-    <a href="/howto">How To Videos</a>
-    <a href="/contact">Contact</a>
-    <a href="/logout">Log out</a>
-  </nav>
-
-  <!-- Home Content -->
-  <div class="home-container">
-    <h1><b id="name">Upload Results</b></h1>
-    <h2>Year group</h2>
-    <select name="year-group" id="year-group">
-        <option value="11">11</option>
-        <option value="10">10</option>
-        <option value="9">9</option>
-        <option value="8">8</option>
-        <option value="7">7</option>
-        <option value="6">6</option>
-        <option value="5">5</option>
-    </select>
-
-    <h2>Test Type</h2>
-    <select name="test-type" id="test-type">
-        <option value="formal">Formal Test - this test was done in full test conditions and marked by a teacher</option>
-        <option value="practice">Practise practise paper - This test was not done in test conditions. </option>
-    </select>
-
-    <h2>Test Date</h2>
-    <input type="date" id="start" name="trip-start" value="" />
-    <script>
-        const currentYear = new Date().getFullYear();
-        const previousYear = currentYear - 1;
-        const minDate = `${previousYear}-01-01`;
-        const maxDate = `${currentYear}-12-31`;
-
-        const dateInput = document.getElementById("start");
-        dateInput.min = minDate;
-        dateInput.max = maxDate;
-    </script>
-
-  <h2>Paper</h2>
-  <select name="test-type" id="test-type">
-      <option value="formal">Formal Test - this test was done in full test conditions and marked by a teacher</option>
-      <option value="practice">Practise practise paper - This test was not done in test conditions. </option>
-  </select>
-  </div>
-
-  <script>
-    const url = new URL(window.location.href);
-
-    // Get the query string parameters
-    const queryParams = new URLSearchParams(url.search);
-
-    function toggleNav() {
-        var navbar = document.querySelector('.navbar');
-        navbar.classList.toggle('active');
-    }
-
-
-
-    function setCookie(name, value, days) {
-        const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        const expires = "expires=" + date.toUTCString();
-        document.cookie = `${name}=${value}; ${expires}; path=/`;
-    }
-
-    function getCookie(name) {
-        const cookieString = document.cookie;
-        const cookies = cookieString.split(';');
-        
-        for (const cookie of cookies) {
-            const [key, ...valueParts] = cookie.trim().split('=');
-            const value = valueParts.join('='); // In case the value contains '='
-
-            if (key === name) {
-                return decodeURIComponent(value); // Decode the cookie value
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pinpoint Learning</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <style>
+            /* General Body Styling */
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Poppins', sans-serif;
+                background-color: #1A1A1A;
+                color: #f1f1f1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                height: 100vh;
+                overflow: hidden;
             }
-        }
-        
-        return null;
-    }
 
-    function formatPaperStr(input) {
-        str = input
-            .replace(/_/g, ' ')
-            .replace(/(\d)(?=[a-zA-Z])/g, '$1 ')
-            .replace(/([a-zA-Z])(\d)/g, '$1 $2')
-            .replace(/\s+/g, ' ')
-            .trim();
+            /* Navbar */
+            .navbar {
+                width: 100%;
+                background-color: #121212;
+                padding: 15px 0;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+                text-align: center;
+            }
 
-        if (str.charAt(str.length - 2) === ' ') {
-            str = str.slice(0, str.length - 2) + str.slice(str.length - 1);
-        }
+            .navbar a {
+                color: #f1f1f1;
+                text-decoration: none;
+                font-size: 18px;
+                margin: 0 20px;
+                padding: 10px;
+                display: inline-block;
+            }
 
-        return str;
-    }
-  </script>
+            .navbar a:hover {
+                color: #00aaff;
+            }
 
-</body>
+            .navbar .menu-toggle {
+                display: none;
+            }
+
+            .navbar a.active {
+                color: #00aaff;
+            }
+
+            /* Mobile Responsiveness */
+            @media (max-width: 850px) {
+                .navbar a {
+                    display: none;
+                    margin: 10px 0;
+                }
+
+                .navbar .menu-toggle {
+                    display: block;
+                    font-size: 24px;
+                    cursor: pointer;
+                    margin: 0 auto;
+                }
+
+                .navbar.active a {
+                    display: block;
+                }
+            }
+
+            /* Home Content */
+            .home-container {
+                margin-top: 80px;
+                background-color: #121212;
+                padding: 40px;
+                border-radius: 15px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+                width: 100%;
+                max-width: 800px;
+                max-height: 600px;
+                overflow-y: scroll;
+                scrollbar-color: #1d1d1d #121212;
+            }
+
+            h1 {
+                font-size: 36px;
+                font-weight: 600;
+                color: #ffffff;
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                font-size: 24px;
+                color: #ffffff;
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
+
+            a {
+                color: white;
+            }
+
+            .card {
+                background-color: #333;
+                border-radius: 15px;
+                padding: 20px;
+                margin: 10px;
+                display: inline-block;
+                width: 23%;
+                text-align: center;
+                color: #ffffff;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .card img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .card h2 {
+                margin-top: 10px;
+                font-size: 18px;
+            }
+
+            .card a {
+                color: #00aaff;
+                font-size: 16px;
+                text-decoration: none;
+            }
+
+            .card a:hover {
+                color: #0088cc;
+            }
+
+            /* Mobile Responsiveness */
+            @media (max-width: 850px) {
+                .card {
+                    width: 45%;
+                }
+
+                h1 {
+                    font-size: 28px;
+                }
+
+                h2 {
+                    font-size: 20px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .card {
+                    width: 90%;
+                }
+
+                .navbar {
+                    padding: 10px 0;
+                }
+
+                h1 {
+                    font-size: 24px;
+                }
+            }
+
+            select,
+            input {
+                /* Reset */
+                appearance: none;
+                line-height: normal;
+                position: relative;
+                background-position: right 10px top 50%;
+                background-repeat: no-repeat;
+                box-sizing: border-box;
+                width: 100%;
+                border-radius: 4px;
+                background-color: rgb(18, 18, 18);
+                border: white 1px solid;
+                color: white;
+                text-align: center;
+                padding: 14px;
+                margin-bottom: 20px;
+            }
+
+            select:focus,
+            input:focus {
+                outline: none;
+                border: 1px solid white;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 14px;
+                background-color: #00aaff;
+                border: none;
+                border-radius: 8px;
+                color: #fff;
+                font-size: 18px;
+                cursor: pointer;
+                margin-bottom: 12px;
+            }
+
+            .btn:hover {
+                background-color: #0088cc;
+            }
+
+            table.table.table-bordered {
+                width: 100%;
+
+                thead:nth-child(1) {
+                    background-color: #1d1d1d;
+                    color: white;
+                }
+
+                th:nth-child(1) {
+                    background-color: #1d1d1d;
+                }
+            }
+
+            div#topics-table a:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+                padding: 10px 0;
+            }
+
+            div#topics-table {
+                padding: 40px 0;
+                text-align: left;
+            }
+
+            div#topics-table a {
+                text-decoration: none;
+                background-color: #1d1d1d;
+                padding: 10px 0 10px 5px;
+            }
+        </style>
+    </head>
+    <body role="document">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <span class="menu-toggle" onclick="toggleNav()">☰</span>
+            <a href="/dashboard">Home</a>
+            <a href="/upload" class="active">Input your test scores</a>
+            <a href="/howto">How To Videos</a>
+            <a href="/contact">Contact</a>
+            <a href="/logout">Log out</a>
+        </nav>
+        <!-- Home Content -->
+        <div class="home-container">
+            <h1>
+                <b id="name">Upload Results</b>
+            </h1>
+            <h2>Year group</h2>
+            <select name="year-group" id="year-group">
+                <option value="11">11</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+            </select>
+            <h2>Test Type</h2>
+            <select name="test-type" id="test-type">
+                <option value="formal">Formal Test - this test was done in full test conditions and marked by a teacher</option>
+                <option value="practice">Practise practise paper - This test was not done in test conditions. </option>
+            </select>
+            <h2>Test Date</h2>
+            <input type="date" id="start" name="trip-start" value="" />
+            <script>
+                const currentYear = new Date().getFullYear();
+                const previousYear = currentYear - 1;
+                const minDate = `${previousYear}-01-01`;
+                const maxDate = `${currentYear}-12-31`;
+                const dateInput = document.getElementById("start");
+                dateInput.min = minDate;
+                dateInput.max = maxDate;
+            </script>
+            <h2>Paper</h2>
+            <div id="dropdown-container"></div>
+        </div>
+        <script>
+            const url = new URL(window.location.href);
+            // Get the query string parameters
+            const queryParams = new URLSearchParams(url.search);
+
+            function toggleNav() {
+                var navbar = document.querySelector('.navbar');
+                navbar.classList.toggle('active');
+            }
+            // Papers dropdown code. (THIS WAS SO PAINFUL)
+            {
+                fetch(`/assets/papers.json?t=${Date.now()}`)
+                .then(response => response.json())
+                .then(papers => {
+                    function addDrop(papers){
+                        const dropdown = document.createElement('select')
+                        dropdown.innerHTML += `<option value="default" disabled>Please select an option</option>`;
+                        if(Array.isArray(papers)){
+                            papers.forEach(paper => {
+                                dropdown.innerHTML += `<option value="${paper}">${paper}</option>`;
+                            });
+                        } else{
+                            for (const paperName in papers) {
+                                if (Object.prototype.hasOwnProperty.call(papers, paperName)) {
+                                    dropdown.innerHTML += `<option value="${paperName}">${paperName}</option>`;
+                                }
+                            } 
+                        }
+                        document.querySelector('#dropdown-container').append(dropdown);
+                        dropdown.value = 'default';
+
+                        dropdown.addEventListener('change', ()=>{
+                            const value = dropdown.value;
+
+                            // Clear all further children
+                            while(dropdown.nextElementSibling){
+                                dropdown.nextElementSibling.remove();
+                            }
+
+                            if(!papers[value]){
+                                return;
+                            }
+                            if(Object.entries(papers[value])[0][0] !== 'papers'){
+                                addDrop(papers[value]);
+                            } else{
+                                addDrop(papers[value]['papers']);
+                            }
+                        })
+                    }
+
+                    addDrop(papers);
+                })
+                .catch(error => {
+                    console.error('Error fetching the JSON:', error);
+                });
+            }
+
+            function continueOn(paper){
+
+            }
+
+            function setCookie(name, value, days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                const expires = "expires=" + date.toUTCString();
+                document.cookie = `${name}=${value}; ${expires}; path=/`;
+            }
+
+            function getCookie(name) {
+                const cookieString = document.cookie;
+                const cookies = cookieString.split(';');
+                for (const cookie of cookies) {
+                    const [key, ...valueParts] = cookie.trim().split('=');
+                    const value = valueParts.join('='); // In case the value contains '='
+                    if (key === name) {
+                        return decodeURIComponent(value); // Decode the cookie value
+                    }
+                }
+                return null;
+            }
+
+            function formatPaperStr(input) {
+                str = input.replace(/_/g, ' ').replace(/(\d)(?=[a-zA-Z])/g, '$1 ').replace(/([a-zA-Z])(\d)/g, '$1 $2').replace(/\s+/g, ' ').trim();
+                if (str.charAt(str.length - 2) === ' ') {
+                    str = str.slice(0, str.length - 2) + str.slice(str.length - 1);
+                }
+                return str;
+            }
+        </script>
+    </body>
 </html>
