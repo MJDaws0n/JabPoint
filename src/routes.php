@@ -367,3 +367,7 @@ $router->addRoute('get', '/paper-view', function() use($routesDir) {
 $router->addRoute('get', '/upload', function() use($routesDir) {
     include_once $routesDir.'upload.html';
 });
+// Upload-results
+$router->addRoute('get', '/upload-results', function() use($routesDir) {
+    include_once $routesDir.'upload-results.html';
+});

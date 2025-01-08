@@ -283,9 +283,9 @@
                 dateInput.min = minDate;
                 dateInput.max = maxDate;
             </script>
-            <h2>Paper</h2>
+            <h2 id="paper-name">LOADING...</h2>
             <div id="dropdown-container"></div>
-            <button class="btn" style="display: none;" id="continue-btn">Continue</button>
+            <button class="btn" id="continue-btn">Continue</button>
         </div>
         <script>
             const url = new URL(window.location.href);
@@ -296,81 +296,9 @@
                 var navbar = document.querySelector('.navbar');
                 navbar.classList.toggle('active');
             }
-            // Papers dropdown code
+
             {
-                fetch(`/assets/papers.json?t=${Date.now()}`)
-                .then(response => response.json())
-                .then(papers => {
-                    function addDrop(papers){
-                        const dropdown = document.createElement('select')
-                        dropdown.innerHTML += `<option value="default" disabled>Please select an option</option>`;
-                        if(Array.isArray(papers)){
-                            papers.forEach(paper => {
-                                dropdown.innerHTML += `<option value="${paper}">${paper}</option>`;
-                            });
-                        } else{
-                            for (const paperName in papers) {
-                                if (Object.prototype.hasOwnProperty.call(papers, paperName)) {
-                                    dropdown.innerHTML += `<option value="${paperName}">${paperName}</option>`;
-                                }
-                            } 
-                        }
-                        document.querySelector('#dropdown-container').append(dropdown);
-                        dropdown.value = 'default';
-
-                        dropdown.addEventListener('change', ()=>{
-                            document.querySelector('#continue-btn').style.display = 'none';
-                            const value = dropdown.value;
-
-                            // Clear all further children
-                            while(dropdown.nextElementSibling){
-                                dropdown.nextElementSibling.remove();
-                            }
-
-                            if(!papers[value]){
-                                document.querySelector('#continue-btn').style.display = '';
-                                return;
-                            }
-                            if(Object.entries(papers[value])[0][0] !== 'papers'){
-                                addDrop(papers[value]);
-                            } else{
-                                addDrop(papers[value]['papers']);
-                            }
-                        })
-                    }
-
-                    addDrop(papers);
-                })
-                .catch(error => {
-                    console.error('Error fetching the JSON:', error);
-                });
-            }
-
-            document.querySelector('#continue-btn').addEventListener('click', ()=>{
-                window.location.href = `/upload-results?paper=${document.querySelector('#dropdown-conatiner').lastElementChild.value}&a
-                
-                
-                `;
-            })
-
-            function setCookie(name, value, days) {
-                const date = new Date();
-                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                const expires = "expires=" + date.toUTCString();
-                document.cookie = `${name}=${value}; ${expires}; path=/`;
-            }
-
-            function getCookie(name) {
-                const cookieString = document.cookie;
-                const cookies = cookieString.split(';');
-                for (const cookie of cookies) {
-                    const [key, ...valueParts] = cookie.trim().split('=');
-                    const value = valueParts.join('='); // In case the value contains '='
-                    if (key === name) {
-                        return decodeURIComponent(value); // Decode the cookie value
-                    }
-                }
-                return null;
+                document.querySelector('#paper-name').textContent = queryParams.get('paper');
             }
 
             function formatPaperStr(input) {
