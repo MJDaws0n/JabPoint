@@ -235,29 +235,30 @@
     // Get the cached user data
     let user = null;
     try {
-        user = JSON.parse(getCookie('user_cache'));
+        user = JSON.parse(getLocalStorage('user_cache'));
+        console.log(user);
+
+        if (user) {
+          document.getElementById('name').innerHTML = user.fname;
+
+          user.papers.forEach((name, index) => {
+              const option = document.createElement('option');
+              option.value = user.paperValues[index];
+              option.textContent = formatPaperStr(name);
+              document.querySelector('#past-papers').appendChild(option);
+          });
+          document.querySelector('#past-papers').disabled = false;
+          document.querySelector('#wait').remove();
+      }
+
     } catch (error) {
         console.error("Invalid JSON:", error);
     }
-
-    if (user) {
-        document.getElementById('name').innerHTML = user.fname;
-
-        user.papers.forEach((name, index) => {
-            const option = document.createElement('option');
-            option.value = user.paperValues[index];
-            option.textContent = formatPaperStr(name);
-            document.querySelector('#past-papers').appendChild(option);
-        });
-        document.querySelector('#past-papers').disabled = false;
-        document.querySelector('#wait').remove();
-    }
-
     // Ping our API to get pinpoint first and last name
     fetch('/user')
         .then(response => response.json())
         .then(data => {
-            setCookie('user_cache', JSON.stringify(data), 30);
+            setLocalStorage('user_cache', JSON.stringify(data), 30);
             document.getElementById('name').textContent = data.fname;
             document.getElementById('name').style.color = 'white';
 
@@ -317,6 +318,23 @@
         
         return null;
     }
+
+    function setLocalStorage(name, value, days) {
+      const date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      const expires = date.toUTCString();
+      const data = JSON.stringify({ value: value, expires: expires });
+      localStorage.setItem(name, data);
+  }
+  function getLocalStorage(name) {
+      const item = localStorage.getItem(name);
+      if (item === null) return null;
+
+      const { value, expires } = JSON.parse(item);
+      const now = new Date();
+
+      return value;
+  }
 
     function formatPaperStr(input) {
         str = input

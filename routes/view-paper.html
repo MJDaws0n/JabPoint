@@ -277,8 +277,8 @@
     // Page cache
     let paper = null;
     try {
-        console.log(getCookie('paper_cache_' + queryParams.get('id')));
-        paper = JSON.parse(getCookie('paper_cache_' + queryParams.get('id')));
+        console.log(getLocalStorage('paper_cache_' + queryParams.get('id')));
+        paper = JSON.parse(getLocalStorage('paper_cache_' + queryParams.get('id')));
     } catch (error) {
         console.error("Invalid JSON:", error);
     }
@@ -360,7 +360,7 @@
     fetch('/paper?paper=' + queryParams.get('id'))
         .then(response => response.json())
         .then(paper => {
-            setCookie('paper_cache_'+queryParams.get('id'), JSON.stringify(paper), 30);
+            setLocalStorage('paper_cache_'+queryParams.get('id'), JSON.stringify(paper), 30);
             nameConainer.style.color = 'white';
 
             // Show total marks
@@ -412,6 +412,23 @@
         }
         
         return null;
+    }
+
+    function setLocalStorage(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = date.toUTCString();
+        const data = JSON.stringify({ value: value, expires: expires });
+        localStorage.setItem(name, data);
+    }
+    function getLocalStorage(name) {
+        const item = localStorage.getItem(name);
+        if (!item) return null;
+
+        const { value, expires } = JSON.parse(item);
+        const now = new Date();
+
+        return value;
     }
 
     function formatPaperStr(input) {

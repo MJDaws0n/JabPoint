@@ -347,10 +347,7 @@
             }
 
             document.querySelector('#continue-btn').addEventListener('click', ()=>{
-                window.location.href = `/upload-results?paper=${document.querySelector('#dropdown-conatiner').lastElementChild.value}&a
-                
-                
-                `;
+                window.location.href = `/upload-results?paper=${document.querySelector('#dropdown-container').lastElementChild.value}&y=${document.querySelector('#year-group').value}&t=${document.querySelector('#test-type').value}&d=${document.querySelector('#start').value}`;
             })
 
             function setCookie(name, value, days) {

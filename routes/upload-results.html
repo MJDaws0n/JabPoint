@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pinpoint Learning</title>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.all.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css" rel="stylesheet">
         <style>
             /* General Body Styling */
             body {
@@ -255,50 +258,201 @@
         <!-- Home Content -->
         <div class="home-container">
             <h1>
-                <b id="name">Upload Results</b>
+                <b id="paper-name">Upload Results</b>
             </h1>
-            <h2>Year group</h2>
-            <select name="year-group" id="year-group">
-                <option value="11">11</option>
-                <option value="10">10</option>
-                <option value="9">9</option>
-                <option value="8">8</option>
-                <option value="7">7</option>
-                <option value="6">6</option>
-                <option value="5">5</option>
-            </select>
-            <h2>Test Type</h2>
-            <select name="test-type" id="test-type">
-                <option value="formal">Formal Test - this test was done in full test conditions and marked by a teacher</option>
-                <option value="practice">Practise practise paper - This test was not done in test conditions. </option>
-            </select>
-            <h2>Test Date</h2>
-            <input type="date" id="start" name="trip-start" value="" />
-            <script>
-                const currentYear = new Date().getFullYear();
-                const previousYear = currentYear - 1;
-                const minDate = `${previousYear}-01-01`;
-                const maxDate = `${currentYear}-12-31`;
-                const dateInput = document.getElementById("start");
-                dateInput.min = minDate;
-                dateInput.max = maxDate;
-            </script>
-            <h2 id="paper-name">LOADING...</h2>
-            <div id="dropdown-container"></div>
-            <button class="btn" id="continue-btn">Continue</button>
+            <h2 id="loading">Loading paper from PinPoint...</h2>
+            <h2 id="current-question"></h2>
+            <input type="text" style="display: none;" id="question-score" placeholder="Max ()" />
+            <form style="display: none;" id="hidden-form"></form>
+            <button class="btn" id="continue-btn" style="display: none;">Continue</button>
         </div>
         <script>
             const url = new URL(window.location.href);
             // Get the query string parameters
             const queryParams = new URLSearchParams(url.search);
 
+            const scores = [];
+
             function toggleNav() {
                 var navbar = document.querySelector('.navbar');
                 navbar.classList.toggle('active');
             }
 
+            // Set paper name
             {
                 document.querySelector('#paper-name').textContent = queryParams.get('paper');
+            }
+
+            // Paper API
+            {
+                let type = 'f';
+                if(queryParams.get('t') === 'practice'){
+                    type = 'i';
+                }
+                fetch('/fetch-paper?paper=' + queryParams.get('paper') + '&date=' + queryParams.get('d') + '&test=' + type + '&year=' + queryParams.get('y'))
+                    .then(response => response.json())
+                    .then(paper => {
+                        // Populate the form
+                        document.querySelector('#hidden-form').innerHTML = `${paper.form}`;
+
+                        // Hide the loading message
+                        document.querySelector('#loading').style.display = 'none';
+
+                        // Show input box
+                        document.querySelector('#question-score').style.display = 'block';
+
+                        // Start
+                        document.querySelector('#continue-btn').style.display = 'block';
+                        document.querySelector('#continue-btn').click();
+                })
+                .catch(error => console.error('Error:', error));
+            }
+
+            // Continue button
+            {
+                let currentQuestionIndex = 0;
+
+                document.querySelector('#continue-btn').addEventListener('click', () => {
+                    if(document.querySelector('#question-score').hasAttribute('data-question')){
+                        if(parseInt(document.querySelector('#question-score').value) > parseInt(document.querySelector('#question-score').getAttribute('placeholder').slice(5, -1))) {
+                            alert('You cannot score more than the maximum score for this question');
+                            document.querySelector('#question-score').value = '';
+                            return;
+                        }
+                        if(parseInt(document.querySelector('#question-score').value).toString() === 'NaN' || parseInt(document.querySelector('#question-score').value).toString() !== document.querySelector('#question-score').value) {
+                            alert('Please enter a valid number');
+                            document.querySelector('#question-score').value = '';
+                            return;
+                        }
+                        if(parseInt(document.querySelector('#question-score').value) < 0) {
+                            alert('Surely you are smart enough to score a whole number');
+                            document.querySelector('#question-score').value = '';
+                            return;
+                        }
+                        scores.push([document.querySelector('#question-score').getAttribute('data-question'), document.querySelector('#question-score').value]);
+                    }
+
+                    if(!document.querySelector('#hidden-form').children[currentQuestionIndex + 1]){
+                        upload();
+                        return;
+                    }
+
+                    while(document.querySelector('#hidden-form').children[currentQuestionIndex].tagName === 'BR') {
+                        currentQuestionIndex++;
+                    }
+                    const questionID = document.querySelector('#hidden-form').children[currentQuestionIndex].name.slice(1);
+                    let question = document.querySelector('#hidden-form').children[currentQuestionIndex].previousSibling.textContent;
+                    {
+                        const questionParts = question.trim().replace(/\s+/g, ' ').split(' ');
+                        
+                        if(questionParts.length === 2) {
+                            question = questionParts[1].slice(1);
+                        }
+                        if(questionParts.length === 1) {
+                            question = questionParts[0].slice(1);
+                        }
+                    }
+                    let score = document.querySelector('#hidden-form').children[currentQuestionIndex].nextSibling.textContent;
+                    {
+                        const scoreParts = score.trim().replace(/\s+/g, ' ').split(' ');
+                        score = scoreParts[0].slice(1);
+                    }
+
+                    document.querySelector('#current-question').textContent = 'What did you get for '+question + ' ('+score.toString()+'?';
+                    document.querySelector('#question-score').setAttribute('placeholder', 'Max ('+score.toString()+'');
+
+                    document.querySelector('#question-score').setAttribute('data-question', questionID);
+
+                    
+                    // Clear question box
+                    document.querySelector('#question-score').value = '';
+
+                    currentQuestionIndex++
+                });
+            }
+
+            function upload(){
+                const formattedData = {};
+                scores.forEach(([questionNumber, value]) => {
+                    formattedData[`q${questionNumber}`] = value;
+                });
+                
+                fetch('/upload-paper?Lpaper='+queryParams.get('paper'), {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams({
+                        ...formattedData
+                    }),
+                    }).then(response => {
+                        if (response.ok) {
+                            return response.text();
+                        }
+                        throw new Error('Network response was not ok.');
+                    }).then(data => {
+                        const response = JSON.parse(data);
+                        if (response.status === "success") {
+                            Swal.fire({
+                                title: "Paper uploaded successfully",
+                                text: "I did NOT steal this tick box from PinPoint. PinPoint stole it from me. Just kidding, it\'s free online.",
+                                icon: "success"
+                            });
+                        } else {
+                            console.log(response.message);
+                        }
+                    }).catch(error => {
+                        console.error('There has been a problem with your fetch operation:', error);
+                });
+            }
+
+            // Listner for clicking enter on input box
+            {
+                document.querySelector('#question-score').addEventListener('keydown', function(event) {
+                if(event.key === 'Enter') {
+                    document.querySelector('#continue-btn').click();
+                }
+            });
+            }
+
+            function setCookie(name, value, days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                const expires = "expires=" + date.toUTCString();
+                document.cookie = `${name}=${value}; ${expires}; path=/`;
+            }
+
+            function getCookie(name) {
+                const cookieString = document.cookie;
+                const cookies = cookieString.split(';');
+                
+                for (const cookie of cookies) {
+                    const [key, ...valueParts] = cookie.trim().split('=');
+                    const value = valueParts.join('='); // In case the value contains '='
+
+                    if (key === name) {
+                        return decodeURIComponent(value); // Decode the cookie value
+                    }
+                }
+                
+                return null;
+            }
+
+            function setLocalStorage(name, value, days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                const expires = date.toUTCString();
+                const data = JSON.stringify({ value: value, expires: expires });
+                localStorage.setItem(name, data);
+            }
+            function getLocalStorage(name) {
+                const item = localStorage.getItem(name);
+                if (!item) return null;
+
+                const { value, expires } = JSON.parse(item);
+                const now = new Date();
+
+                return value;
             }
 
             function formatPaperStr(input) {
