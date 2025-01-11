@@ -1,0 +1,2220 @@
+{
+    "9 to 1 Specification": {
+        "Edexcel": {
+            "GCSE Exam Papers": {
+                "November 2024 GCSE Papers Edexcel": {
+                    "papers": [
+                        "9to1_GCSE_Edexcel_Nov2024_1F",
+                        "9to1_GCSE_Edexcel_Nov2024_1H",
+                        "9to1_GCSE_Edexcel_Nov2024_1F_Whole_Qns",
+                        "9to1_GCSE_Edexcel_Nov2024_1H_Whole_Qns",
+                        "9to1_GCSE_Edexcel_Nov2024_2F_Whole_Qns",
+                        "9to1_GCSE_Edexcel_Nov2024_2H_Whole_Qns",
+                        "9to1_GCSE_Edexcel_Nov2024_3F_Whole_Qns",
+                        "9to1_GCSE_Edexcel_Nov2024_3H_Whole_Qns"
+                    ]
+                },
+                "June 2024 GCSE Papers Edexcel": {
+                    "papers": [
+                        "9to1_GCSE_Edexcel_Summer_2024_1F",
+                        "9to1_GCSE_Edexcel_Summer_2024_1H",
+                        "9to1_GCSE_Edexcel_Summer_2024_2F",
+                        "9to1_GCSE_Edexcel_Summer_2024_2H",
+                        "9to1_GCSE_Edexcel_Summer_2024_3F",
+                        "9to1_GCSE_Edexcel_Summer_2024_3H"
+                    ]
+                },
+                "November 2023 GCSE Papers Edexcel": {
+                    "papers": [
+                        "9to1_GCSE_Edexcel_Nov2023_1F",
+                        "9to1_GCSE_Edexcel_Nov2023_1H",
+                        "9to1_GCSE_Edexcel_Nov2023_2F",
+                        "9to1_GCSE_Edexcel_Nov2023_2H",
+                        "9to1_GCSE_Edexcel_Nov2023_3F",
+                        "9to1_GCSE_Edexcel_Nov2023_3H",
+                        "9to1_GCSE_Edexcel_Nov2023_1F_Whole_Qns",
+                        "9to1_GCSE_Edexcel_Nov2023_1H_Whole_Qns",
+                        "9to1_GCSE_Edexcel_Nov2023_2F_Whole_Qns",
+                        "9to1_GCSE_Edexcel_Nov2023_2H_Whole_Qns",
+                        "9to1_GCSE_Edexcel_Nov2023_3F_Whole_Qns",
+                        "9to1_GCSE_Edexcel_Nov2023_3H_Whole_Qns"
+                    ]
+                },
+                "June 2023 GCSE Papers Edexcel": {
+                    "papers": [
+                        "9to1_GCSE_Edxcel_Summer_2023_1F",
+                        "9to1_GCSE_Edxcel_Summer_2023_1H",
+                        "9to1_GCSE_Edxcel_Summer_2023_2F",
+                        "9to1_GCSE_Edxcel_Summer_2023_2H",
+                        "9to1_GCSE_Edxcel_Summer_2023_3F",
+                        "9to1_GCSE_Edxcel_Summer_2023_3H"
+                    ]
+                },
+                "November 2022 GCSE Papers Edexcel": {
+                    "papers": [
+                        "9to1_GCSE_Edexcel_Nov2022_1F",
+                        "9to1_GCSE_Edexcel_Nov2022_1H",
+                        "9to1_GCSE_Edexcel_Nov2022_2F",
+                        "9to1_GCSE_Edexcel_Nov2022_2H",
+                        "9to1_GCSE_Edexcel_Nov2022_3F",
+                        "9to1_GCSE_Edexcel_Nov2022_3H"
+                    ]
+                },
+                "June 2022 GCSE Papers Edexcel": {
+                    "papers": [
+                        "9to1_GCSE_Edxcel_Summer_2022_1F",
+                        "9to1_GCSE_Edxcel_Summer_2022_1H",
+                        "9to1_GCSE_Edxcel_Summer_2022_2F",
+                        "9to1_GCSE_Edxcel_Summer_2022_2H",
+                        "9to1_GCSE_Edxcel_Summer_2022_3F",
+                        "9to1_GCSE_Edxcel_Summer_2022_3H"
+                    ]
+                },
+                "November 2021 GCSE Papers Edexcel": {
+                    "papers": [
+                        "9to1_GCSE_Edexcel_Nov2021_1F",
+                        "9to1_GCSE_Edexcel_Nov2021_1H",
+                        "9to1_GCSE_Edexcel_Nov2021_2F",
+                        "9to1_GCSE_Edexcel_Nov2021_2H",
+                        "9to1_GCSE_Edexcel_Nov2021_3F",
+                        "9to1_GCSE_Edexcel_Nov2021_3H"
+                    ]
+                },
+                "November 2020 GCSE Papers Edexcel": {
+                    "papers": [
+                        "9to1_GCSE_Edexcel_Nov2020_1F",
+                        "9to1_GCSE_Edexcel_Nov2020_1H",
+                        "9to1_GCSE_Edexcel_Nov2020_2F",
+                        "9to1_GCSE_Edexcel_Nov2020_2H",
+                        "9to1_GCSE_Edexcel_Nov2020_3F",
+                        "9to1_GCSE_Edexcel_Nov2020_3H"
+                    ]
+                },
+                "June 2019 GCSE Papers Edexcel": {
+                    "papers": [
+                        "9to1_GCSE_Edxcel_Summer2019_1F",
+                        "9to1_GCSE_Edxcel_Summer2019_1H",
+                        "9to1_GCSE_Edxcel_Summer2019_2F",
+                        "9to1_GCSE_Edxcel_Summer2019_2H",
+                        "9to1_GCSE_Edxcel_Summer2019_3F",
+                        "9to1_GCSE_Edxcel_Summer2019_3H",
+                        "9to1_GCSE_Edxcel_Summer2019_1F_Hegarty_Ark",
+                        "9to1_GCSE_Edxcel_Summer2019_1H_Hegarty_Ark"
+                    ]
+                },
+                "November 2019 GCSE Papers Edexcel": {
+                    "papers": [
+                        "9to1_GCSE_Edexcel_Nov2019_1F",
+                        "9to1_GCSE_Edexcel_Nov2019_1H",
+                        "9to1_GCSE_Edexcel_Nov2019_2F",
+                        "9to1_GCSE_Edexcel_Nov2019_2H",
+                        "9to1_GCSE_Edexcel_Nov2019_3F",
+                        "9to1_GCSE_Edexcel_Nov2019_3H"
+                    ]
+                },
+                "June 2018 GCSE Papers Edexcel": {
+                    "papers": [
+                        "9to1_GCSE_Edxcel_Summer2018_1F",
+                        "9to1_GCSE_Edxcel_Summer2018_1H",
+                        "9to1_GCSE_Edxcel_Summer2018_2F",
+                        "9to1_GCSE_Edxcel_Summer2018_2H",
+                        "9to1_GCSE_Edxcel_Summer2018_3F",
+                        "9to1_GCSE_Edxcel_Summer2018_3H"
+                    ]
+                },
+                "November 2018 GCSE Papers Edexcel": {
+                    "papers": [
+                        "9to1_Edexcel_GCSE_Nov2018_1F",
+                        "9to1_Edexcel_GCSE_Nov2018_1H",
+                        "9to1_Edexcel_GCSE_Nov2018_2F",
+                        "9to1_Edexcel_GCSE_Nov2018_2H",
+                        "9to1_Edexcel_GCSE_Nov2018_3F",
+                        "9to1_Edexcel_GCSE_Nov2018_3H"
+                    ]
+                },
+                "June 2017 GCSE Papers Edexcel": {
+                    "papers": [
+                        "9to1_2017_GCSE_1F",
+                        "9to1_2017_GCSE_1H",
+                        "9to1_2017_GCSE_2F",
+                        "9to1_2017_GCSE_2H",
+                        "9to1_2017_GCSE_3F",
+                        "9to1_2017_GCSE_3H"
+                    ]
+                },
+                "November 2017 GCSE Papers": {
+                    "papers": [
+                        "9to1_Edexcel_Nov2017_GCSE_1F",
+                        "9to1_Edexcel_Nov2017_GCSE_1H",
+                        "9to1_Edexcel_Nov2017_GCSE_2F",
+                        "9to1_Edexcel_Nov2017_GCSE_2H",
+                        "9to1_Edexcel_Nov2017_GCSE_3F",
+                        "9to1_Edexcel_Nov2017_GCSE_3H"
+                    ]
+                },
+                "Edexcel Emporuim abc June 2017 QLA": {
+                    "papers": [
+                        "9to1_Edexcel_2017_GCSE_1F",
+                        "9to1_Edexcel_2017_GCSE_1H",
+                        "9to1_Edexcel_2017_GCSE_2F",
+                        "9to1_Edexcel_2017_GCSE_2H",
+                        "9to1_Edexcel_2017_GCSE_3F",
+                        "9to1_Edexcel_2017_GCSE_3H"
+                    ]
+                },
+                "Advanced Info Super User 1 Papers": {
+                    "papers": [
+                        "Bespoke_Rastrick_Y11_Mock_Higher_P1",
+                        "Bespoke_Rastrick_Y11_Mock_HigherP2",
+                        "Bespoke_Rastrick_Y11_Mock_Higher_P3_",
+                        "Bespoke_Rastrick_Y11_Mock_Foundation_P1",
+                        "Bespoke_Rastrick_Y11_Mock_Foundation_P2",
+                        "Bespoke_Rastrick_Y11_Mock_Foundation_P3",
+                        "Y11_Mock_Foundation_P3_CorrectOrder"
+                    ]
+                },
+                "Advanced Info Super User 2 Papers": {
+                    "papers": [
+                        "PPL_SuperUser2_Mock_1F",
+                        "PPL_SuperUser2_Mock_1H",
+                        "PPL_SuperUser2_Mock_2F",
+                        "PPL_SuperUser2_Mock_2H",
+                        "PPL_SuperUser2_Mock_3F",
+                        "PPL_SuperUser2_Mock_3H"
+                    ]
+                },
+                "Advanced Info Pinpoint Compiled Papers": {
+                    "papers": [
+                        "Edexcel_Pinpoint_Mocks_1F",
+                        "Edexcel_Pinpoint_Mocks_1H"
+                    ]
+                }
+            },
+            "Secure Mocks": {
+                "Secure Mocks Set 9 (Spring 2024)": {
+                    "papers": [
+                        "9to1_Edexcel_Secure_Mock_Set9_1F",
+                        "9to1_Edexcel_Secure_Mock_Set9_1H",
+                        "9to1_Edexcel_Secure_Mock_Set9_2F",
+                        "9to1_Edexcel_Secure_Mock_Set9_2H",
+                        "9to1_Edexcel_Secure_Mock_Set9_3F",
+                        "9to1_Edexcel_Secure_Mock_Set9_3H"
+                    ]
+                },
+                "Secure Mocks Set 8 (Spring 2023)": {
+                    "papers": [
+                        "9to1_Edexcel_Secure_Mock_Set8_1F",
+                        "9to1_Edexcel_Secure_Mock_Set8_1H",
+                        "9to1_Edexcel_Secure_Mock_Set8_2F",
+                        "9to1_Edexcel_Secure_Mock_Set8_2H",
+                        "9to1_Edexcel_Secure_Mock_Set8_3F",
+                        "9to1_Edexcel_Secure_Mock_Set8_3H"
+                    ]
+                },
+                "Secure Mocks Set 7 (Spring 2022)": {
+                    "papers": [
+                        "9to1_Edexcel_Secure_Mock_Set7_1F",
+                        "9to1_Edexcel_Secure_Mock_Set7_1H",
+                        "9to1_Edexcel_Secure_Mock_Set7_2F",
+                        "9to1_Edexcel_Secure_Mock_Set7_2H",
+                        "9to1_Edexcel_Secure_Mock_Set7_3F",
+                        "9to1_Edexcel_Secure_Mock_Set7_3H"
+                    ]
+                },
+                "Secure Mocks Set 6 (Spring 2021)": {
+                    "papers": [
+                        "9to1_Edexcel_Secure_Mock_Set6_1F",
+                        "9to1_Edexcel_Secure_Mock_Set6_1H",
+                        "9to1_Edexcel_Secure_Mock_Set6_2F",
+                        "9to1_Edexcel_Secure_Mock_Set6_2H",
+                        "9to1_Edexcel_Secure_Mock_Set6_3F",
+                        "9to1_Edexcel_Secure_Mock_Set6_3H"
+                    ]
+                },
+                "Secure Mocks Set 5 (Spring 2020)": {
+                    "papers": [
+                        "9to1_Edexcel_Secure_Mock_Set5_1F",
+                        "9to1_Edexcel_Secure_Mock_Set5_1H",
+                        "9to1_Edexcel_Secure_Mock_Set5_2F",
+                        "9to1_Edexcel_Secure_Mock_Set5_2H",
+                        "9to1_Edexcel_Secure_Mock_Set5_3F",
+                        "9to1_Edexcel_Secure_Mock_Set5_3H"
+                    ]
+                },
+                "Secure Mocks Set 4 (Autumn 2018)": {
+                    "papers": [
+                        "9to1_Edexcel_Secure_Mock_Set4_1F",
+                        "9to1_Edexcel_Secure_Mock_Set4_1H",
+                        "9to1_Edexcel_Secure_Mock_Set4_2F",
+                        "9to1_Edexcel_Secure_Mock_Set4_2H",
+                        "9to1_Edexcel_Secure_Mock_Set4_3F",
+                        "9to1_Edexcel_Secure_Mock_Set4_3H"
+                    ]
+                },
+                "Secure Mocks Set 3": {
+                    "papers": [
+                        "9to1_Edexcel_Secure_Mock_Set3_1F",
+                        "9to1_Edexcel_Secure_Mock_Set3_1H",
+                        "9to1_Edexcel_Secure_Mock_Set3_2F",
+                        "9to1_Edexcel_Secure_Mock_Set3_2H",
+                        "9to1_Edexcel_Secure_Mock_Set3_3F",
+                        "9to1_Edexcel_Secure_Mock_Set3_3H"
+                    ]
+                },
+                "Secure Mocks Set 2 (Spring 2017)": {
+                    "papers": [
+                        "9to1_Edexcel_Secure_Mock_Set2_1F",
+                        "9to1_Edexcel_Secure_Mock_Set2_1H",
+                        "9to1_Edexcel_Secure_Mock_Set2_2F",
+                        "9to1_Edexcel_Secure_Mock_Set2_2H",
+                        "9to1_Edexcel_Secure_Mock_Set2_3F",
+                        "9to1_Edexcel_Secure_Mock_Set2_3H"
+                    ]
+                },
+                "Secure Mocks Set 1 (Autumn 2016)": {
+                    "papers": [
+                        "9to1_Edexcel_Secure_Mock_1F",
+                        "9to1_Edexcel_Secure_Mock_1H",
+                        "9to1_Edexcel_Secure_Mock_2F",
+                        "9to1_Edexcel_Secure_Mock_2H",
+                        "9to1_Edexcel_Secure_Mock_3F",
+                        "9to1_Edexcel_Secure_Mock_3H"
+                    ]
+                }
+            },
+            "Shadow Papers": {
+                "Shadow Papers Summer 2023": {
+                    "papers": [
+                        "9to1_SHADOW_Edxcel_Summer_2023_1F",
+                        "9to1_SHADOW_Edxcel_Summer_2023_1H",
+                        "9to1_SHADOW_Edxcel_Summer_2023_2F",
+                        "9to1_SHADOW_Edxcel_Summer_2023_2H",
+                        "9to1_SHADOW_Edxcel_Summer_2023_3F",
+                        "9to1_SHADOW_Edxcel_Summer_2023_3H"
+                    ]
+                },
+                "Shadow Papers November 2021": {
+                    "papers": [
+                        "9to1_SHADOW_Edexcel_Nov2021_1F",
+                        "9to1_SHADOW_Edexcel_Nov2021_1H",
+                        "9to1_SHADOW_Edexcel_Nov2021_2F",
+                        "9to1_SHADOW_Edexcel_Nov2021_2H",
+                        "9to1_SHADOW_Edexcel_Nov2021_3F",
+                        "9to1_SHADOW_Edexcel_Nov2021_3H"
+                    ]
+                },
+                "Shadow Papers November 2020": {
+                    "papers": [
+                        "9to1_SHADOW_Edexcel_Nov2020_1F",
+                        "9to1_SHADOW_Edexcel_Nov2020_1H",
+                        "9to1_SHADOW_Edexcel_Nov2020_2F",
+                        "9to1_SHADOW_Edexcel_Nov2020_2H",
+                        "9to1_SHADOW_Edexcel_Nov2020_3F",
+                        "9to1_SHADOW_Edexcel_Nov2020_3H"
+                    ]
+                },
+                "Shadow Papers November 2019": {
+                    "papers": [
+                        "9to1_Shadow_Paper_Nov2019_1F",
+                        "9to1_Shadow_Paper_Nov2019_1H",
+                        "9to1_Shadow_Paper_Nov2019_2F",
+                        "9to1_Shadow_Paper_Nov2019_2H",
+                        "9to1_Shadow_Paper_Nov2019_3F",
+                        "9to1_Shadow_Paper_Nov2019_3H"
+                    ]
+                },
+                "Shadow Papers June 2019": {
+                    "papers": [
+                        "9to1_2019_Set_1_Shadow_Paper_1F",
+                        "9to1_2019_Set_1_Shadow_Paper_1H",
+                        "9to1_2019_Set_1_Shadow_Paper_2F",
+                        "9to1_2019_Set_1_Shadow_Paper_2H",
+                        "9to1_2019_Set_1_Shadow_Paper_3F",
+                        "9to1_2019_Set_1_Shadow_Paper_3H"
+                    ]
+                },
+                "Shadow Papers Nov 2018": {
+                    "papers": [
+                        "9to1_SHADOW_Edexcel_GCSE_Nov2018_1F",
+                        "9to1_SHADOW_Edexcel_GCSE_Nov2018_1H",
+                        "9to1_SHADOW_Edexcel_GCSE_Nov2018_2F",
+                        "9to1_SHADOW_Edexcel_GCSE_Nov2018_2H",
+                        "9to1_SHADOW_Edexcel_GCSE_Nov2018_3F",
+                        "9to1_SHADOW_Edexcel_GCSE_Nov2018_3H"
+                    ]
+                },
+                "Edexcel Shadow Papers Summer 2018": {
+                    "papers": [
+                        "9to1_Set_1_Shadow_Paper_1F",
+                        "9to1_Set_1_Shadow_Paper_1H",
+                        "9to1_Set_1_Shadow_Paper_2F",
+                        "9to1_Set_1_Shadow_Paper_2H",
+                        "9to1_Set_1_Shadow_Paper_3F",
+                        "9to1_Set_1_Shadow_Paper_3H"
+                    ]
+                }
+            },
+            "Specimen & SAMS": {
+                "Specimen Set1 Papers": {
+                    "papers": [
+                        "9to1_Specimen_Set1_1F",
+                        "9to1_Specimen_Set1_1H",
+                        "9to1_Specimen_Set1_2F",
+                        "9to1_Specimen_Set1_2H",
+                        "9to1_Specimen_Set1_3F",
+                        "9to1_Specimen_Set1_3H"
+                    ]
+                },
+                "Specimen Set2 Papers": {
+                    "papers": [
+                        "9to1_Specimen_Set2_1F",
+                        "9to1_Specimen_Set2_1H",
+                        "9to1_Specimen_Set2_2F",
+                        "9to1_Specimen_Set2_2H",
+                        "9to1_Specimen_Set2_3F",
+                        "9to1_Specimen_Set2_3H"
+                    ]
+                },
+                "2015 SAMS Papers Issue 2": {
+                    "papers": [
+                        "9to1_SAMS_1F",
+                        "9to1_SAMS_1H",
+                        "9to1_SAMS_2F",
+                        "9to1_SAM_2H",
+                        "9to1_SAMS_3F",
+                        "9to1_SAMS_3H"
+                    ]
+                },
+                "papers": [
+                    "2014 SAMS Papers Issue 1"
+                ]
+            },
+            "Practice Papers": {
+                "Practice Papers Set1": {
+                    "papers": [
+                        "9to1_Practice_Set1_1F",
+                        "9to1_Practice_Set1_1H",
+                        "9to1_Practice_Set1_2F",
+                        "9to1_Practice_Set1_2H",
+                        "9to1_Practice_Set1_3F",
+                        "9to1_Practice_Set1_3H"
+                    ]
+                },
+                "Practice Papers Set2": {
+                    "papers": [
+                        "9to1_Practice_Set2_1F",
+                        "9to1_Practice_Set2_1H",
+                        "9to1_Practice_Set2_2F",
+                        "9to1_Practice_Set2_2H",
+                        "9to1_Practice_Set2_3F",
+                        "9to1_Practice_Set2_3H"
+                    ]
+                },
+                "Practice Papers Set3": {
+                    "papers": [
+                        "9to1_Practice_Set3_1F",
+                        "9to1_Practice_Set3_1H",
+                        "9to1_Practice_Set3_2F",
+                        "9to1_Practice_Set3_2H",
+                        "9to1_Practice_Set3_3F",
+                        "9to1_Practice_Set3_3H"
+                    ]
+                },
+                "Practice Papers Set4": {
+                    "papers": [
+                        "9to1_Practice_Set4_1F",
+                        "9to1_Practice_Set4_1H",
+                        "9to1_Practice_Set4_2F",
+                        "9to1_Practice_Set4_2H",
+                        "9to1_Practice_Set4_3F",
+                        "9to1_Practice_Set4_3H",
+                        "9to1_Practice_Set4A_1F_Short_Form",
+                        "9to1_Practice_Set4A_1H_Short_Form"
+                    ]
+                },
+                "Practice Papers Set5": {
+                    "papers": [
+                        "9to1_Practice_Set5_1F",
+                        "9to1_Practice_Set5_1H",
+                        "9to1_Practice_Set5_2F",
+                        "9to1_Practice_Set5_2H",
+                        "9to1_Practice_Set5_3F",
+                        "9to1_Practice_Set5_3H"
+                    ]
+                },
+                "Practice Papers Set6": {
+                    "papers": [
+                        "9to1_Practice_Set6_1F",
+                        "9to1_Practice_Set6_1H",
+                        "9to1_Practice_Set6_2F",
+                        "9to1_Practice_Set6_2H",
+                        "9to1_Practice_Set6_3F",
+                        "9to1_Practice_Set6_3H"
+                    ]
+                },
+                "Practice Papers Set 7": {
+                    "papers": [
+                        "9to1_edexcel_Practice_Set_7_1F",
+                        "9to1_edexcel_Practice_Set_7_1H",
+                        "9to1_edexcel_Practice_Set_7_2F",
+                        "9to1_edexcel_Practice_Set_7_2H",
+                        "9to1_edexcel_Practice_Set_7_3F",
+                        "9to1_edexcel_Practice_Set_7_3H"
+                    ]
+                },
+                "Practice Papers Set 8": {
+                    "papers": [
+                        "9to1_Edexcel_Practice_Set8_1F",
+                        "9to1_Edexcel_Practice_Set8_1H",
+                        "9to1_Edexcel_Practice_Set8_2F",
+                        "9to1_Edexcel_Practice_Set8_2H",
+                        "9to1_Edexcel_Practice_Set8_3F",
+                        "9to1_Edexcel_Practice_Set8_3H"
+                    ]
+                },
+                "Practice Papers Set 9": {
+                    "papers": [
+                        "9to1_Edexcel_Practice_Set_9_1F",
+                        "9to1_Edexcel_Practice_Set_9_1H",
+                        "9to1_Edexcel_Practice_Set_9_2F",
+                        "9to1_Edexcel_Practice_Set_9_2H",
+                        "9to1_Edexcel_Practice_Set_9_3F",
+                        "9to1_Edexcel_Practice_Set_9_3H"
+                    ]
+                },
+                "Practice Papers Set 10": {
+                    "papers": [
+                        "9to1_Edexcel_Practice_Set_10_1F",
+                        "9to1_Edexcel_Practice_Set_10_1H",
+                        "9to1_Edexcel_Practice_Set_10_2and3F",
+                        "9to1_Edexcel_Practice_Set_10_2and3H"
+                    ]
+                },
+                "Practice Papers Set 11": {
+                    "papers": [
+                        "9to1Edexcel_Practice_Set_11_1F",
+                        "9to1Edexcel_Practice_Set_11_1H",
+                        "9to1Edexcel_Practice_Set_11_2and3F",
+                        "9to1Edexcel_Practice_Set_11_2and3H"
+                    ]
+                },
+                "Practice Papers Set 12": {
+                    "papers": [
+                        "9to1_Edexcel_Practice_Set_12_1F",
+                        "9to1_Edexcel_Practice_Set_12_1H",
+                        "9to1_Edexcel_Practice_Set_12_2and3F",
+                        "9to1_Edexcel_Practice_Set_12_2and3H"
+                    ]
+                },
+                "Practice Papers Set 13": {
+                    "papers": [
+                        "9to1_Edexcel_Practice_Set_13_1F",
+                        "9to1_Edexcel_Practice_Set_13_1H",
+                        "Edexcel_Practice_Set_13_2and3F",
+                        "9to1_Edexcel_Practice_Set_13_2and3H"
+                    ]
+                },
+                "Practice Papers Set 14": {
+                    "papers": [
+                        "9to1_Edexcel_Practice_Set_14_1F",
+                        "9to1_Edexcel_Practice_Set_14_1H",
+                        "9to1_Edexcel_Practice_Set_14_2and3F",
+                        "9to1_Edexcel_Practice_Set_14_2and3H"
+                    ]
+                },
+                "Practice Papers Set 15": {
+                    "papers": [
+                        "Edexcel_Practice_Set_15_1F",
+                        "Edexcel_Practice_Set_15_1H",
+                        "Edexcel_Practice_Set_15_2and3F",
+                        "Edexcel_Practice_Set_15_2and3H"
+                    ]
+                },
+                "Practice Papers Set 16": {
+                    "papers": [
+                        "Edexcel_Practice_Set_16_1F",
+                        "Edexcel_Practice_Set_16_1H",
+                        "Edexcel_Practice_Set_16_2and3F",
+                        "Edexcel_Practice_Set_16_2and3H"
+                    ]
+                },
+                "Practice Papers Set 17": {
+                    "papers": [
+                        "Edexcel_Practice_Set_17_1F",
+                        "Edexcel_Practice_Set_17_1H",
+                        "Edexcel_Practice_Set_17_2and3F",
+                        "Edexcel_Practice_Set_17_2and3H"
+                    ]
+                },
+                "Short Form: Practice Papers 1A and 1B": {
+                    "papers": [
+                        "9to1_Practice_Set1A_1F_Short_Form",
+                        "9to1_Practice_Set1A_1H_Short_Form",
+                        "9to1_Practice_Set1A_2F_Short_Form",
+                        "9to1_Practice_Set1A_2H_Short_Form",
+                        "9to1_Practice_Set1A_3F_Short_Form",
+                        "9to1_Practice_Set1A_3H_Short_Form",
+                        "9to1_Practice_Set1B_1F_Short_Form",
+                        "9to1_Practice_Set1B_1H_Short_Form",
+                        "9to1_Practice_Set1B_2F_Short_Form",
+                        "9to1_Practice_Set1B_2H_Short_Form",
+                        "9to1_Practice_Set1B_3F_Short_Form",
+                        "9to1_Practice_Set1B_3H_Short_Form"
+                    ]
+                }
+            },
+            "Churchill Papers": {
+                "Churchill Edexcel Set A Papers": {
+                    "papers": [
+                        "Churchill_Edexcel_SetA_1F",
+                        "Churchill_Edexcel_SetA_1H",
+                        "Churchill_Edexcel_SetA_2H",
+                        "Churchill_Edexcel_SetA_3H"
+                    ]
+                },
+                "Churchill Edexcel Set B Papers": {
+                    "papers": [
+                        "Churchill_Edexcel_SetB_1H",
+                        "Churchill_Edexcel_SetB_1F",
+                        "Churchill_Edexcel_SetB_2F",
+                        "Churchill_Edexcel_SetB_2H",
+                        "Churchill_Edexcel_SetB_3F",
+                        "Churchill_Edexcel_SetB_3H"
+                    ]
+                },
+                "Churchill Edexcel Set C Papers": {
+                    "papers": [
+                        "Churchill_Edexcel_SetC_3H"
+                    ]
+                },
+                "Churchill Edexcel Set D Papers": {
+                    "papers": [
+                        "Churchill_Edexcel_SetD_3H"
+                    ]
+                },
+                "Churchill Edexcel Set E Papers": {
+                    "papers": [
+                        "Bespoke_Churchill_Paper_1E",
+                        "Bespoke_Churchill_Paper_13",
+                        "Bespoke_Churchill_Paper_2E",
+                        "Bespoke_Churchill_Higher_2E",
+                        "Bespoke_Churchill_Paper_3E",
+                        "Bespoke_Churchill_Higher_3E"
+                    ]
+                }
+            },
+            "9to1 Baseline Tests": {
+                "papers": [
+                    "9to1_Baseline_Test_A",
+                    "9to1_Baseline_Test_B",
+                    "9to1_Baseline_Test_C"
+                ]
+            }
+        },
+        "AQA": {
+            "AQA GCSE Past Papers": {
+                "June 2024 GCSE Papers AQA": {
+                    "papers": [
+                        "9to1_AQA_GCSE_Summer2024_1F",
+                        "9to1_AQA_GCSE_Summer2024_1H",
+                        "9to1_AQA_GCSE_Summer2024_2F",
+                        "9to1_AQA_GCSE_Summer2024_2H",
+                        "9to1_AQA_GCSE_Summer2024_3F",
+                        "9to1_AQA_GCSE_Summer2024_3H"
+                    ]
+                },
+                "November 2023 GCSE Papers AQA": {
+                    "papers": [
+                        "9to1_AQA_GCSE_Nov2023_1F",
+                        "9to1_AQA_GCSE_Nov2023_1H",
+                        "9to1_AQA_GCSE_Nov2023_2F",
+                        "9to1_AQA_GCSE_Nov2023_2H",
+                        "9to1_AQA_GCSE_Nov2023_3F",
+                        "9to1_AQA_GCSE_Nov2023_3H"
+                    ]
+                },
+                "June 2023 GCSE Papers AQA": {
+                    "papers": [
+                        "9to1_AQA_GCSE_Summer2023_1F",
+                        "9to1_AQA_GCSE_Summer2023_1H",
+                        "9to1_AQA_GCSE_Summer2023_2F",
+                        "9to1_AQA_GCSE_Summer2023_2H",
+                        "9to1_AQA_GCSE_Summer2023_3F",
+                        "9to1_AQA_GCSE_Summer2023_3H"
+                    ]
+                },
+                "November 2022 GCSE Papers AQA": {
+                    "papers": [
+                        "9to1_AQA_GCSE_Nov2022_1F",
+                        "9to1_AQA_GCSE_Nov2022_1H",
+                        "9to1_AQA_GCSE_Nov2022_2F",
+                        "9to1_AQA_GCSE_Nov2022_2H",
+                        "9to1_AQA_GCSE_Nov2022_3F",
+                        "9to1_AQA_GCSE_Nov2022_3H"
+                    ]
+                },
+                "June 2022 GCSE Papers AQA": {
+                    "papers": [
+                        "9to1_AQA_GCSE_Summer2022_1F",
+                        "9to1_AQA_GCSE_Summer2022_1H",
+                        "9to1_AQA_GCSE_Summer2022_2F",
+                        "9to1_AQA_GCSE_Summer2022_2H",
+                        "9to1_AQA_GCSE_Summer2022_3F",
+                        "9to1_AQA_GCSE_Summer2022_3H"
+                    ]
+                },
+                "November 2021 GCSE Papers AQA": {
+                    "papers": [
+                        "9to1_AQA_GCSE_Nov2021_1F",
+                        "9to1_AQA_GCSE_Nov2021_1H",
+                        "9to1_AQA_GCSE_Nov2021_2F",
+                        "9to1_AQA_GCSE_Nov2021_2H",
+                        "9to1_AQA_GCSE_Nov2021_3F",
+                        "9to1_AQA_GCSE_Nov2021_3H"
+                    ]
+                },
+                "November 2020 GCSE Papers AQA": {
+                    "papers": [
+                        "9to1_AQA_GCSE_Nov2020_1F",
+                        "9to1_AQA_GCSE_Nov2020_1H",
+                        "9to1_AQA_GCSE_Nov2020_2F",
+                        "9to1_AQA_GCSE_Nov2020_2H",
+                        "9to1_AQA_GCSE_Nov2020_3F",
+                        "9to1_AQA_GCSE_Nov2020_3H"
+                    ]
+                },
+                "November 2020 Shadow Papers AQA": {
+                    "papers": [
+                        "9to1_AQA_SHADOW_Nov2020_1F",
+                        "9to1_AQA_SHADOW_Nov2020_1H",
+                        "9to1_AQA_SHADOW_Nov2020_2F",
+                        "9to1_AQA_SHADOW_Nov2020_2H",
+                        "9to1_AQA_SHADOW_Nov2020_3F",
+                        "9to1_AQA_SHADOW_Nov2020_3H"
+                    ]
+                },
+                "June 2019 GCSE Papers AQA": {
+                    "papers": [
+                        "9to1_AQA_GCSE_Summer2019_1F",
+                        "9to1_AQA_GCSE_Summer2019_1H",
+                        "9to1_AQA_GCSE_Summer2019_2F",
+                        "9to1_AQA_GCSE_Summer2019_2H",
+                        "9to1_AQA_GCSE_Summer2019_3F",
+                        "9to1_AQA_GCSE_Summer2019_3H",
+                        "9to1_AQA_GCSE_Summer2019_1F_United_Learning"
+                    ]
+                },
+                "November 2019 GCSE Papers AQA": {
+                    "papers": [
+                        "9to1_GCSE_AQA_Nov2019_1F",
+                        "9to1_GCSE_AQA_Nov2019_1H",
+                        "9to1_GCSE_AQA_Nov2019_2F",
+                        "9to1_GCSE_AQA_Nov2019_2H",
+                        "9to1_GCSE_AQA_Nov2019_3F",
+                        "9to1_GCSE_AQA_Nov2019_3H"
+                    ]
+                },
+                "June 2018 GCSE Papers AQA": {
+                    "papers": [
+                        "9to1_AQA_Summer2018_GCSE_1F",
+                        "9to1_AQA_Summer2018_GCSE_1H",
+                        "9to1_AQA_Summer2018_GCSE_2F",
+                        "9to1_AQA_Summer2018_GCSE_2H",
+                        "9to1_AQA_Summer2018_GCSE_3F",
+                        "9to1_AQA_Summer2018_GCSE_3H"
+                    ]
+                },
+                "November 2018 GCSE Papers AQA": {
+                    "papers": [
+                        "9to1_AQA_GCSE_Nov2018_1F",
+                        "9to1_AQA_GCSE_Nov2018_1H",
+                        "9to1_AQA_GCSE_Nov2018_2F",
+                        "9to1_AQA_GCSE_Nov2018_2H",
+                        "9to1_AQA_GCSE_Nov2018_3F",
+                        "9to1_AQA_GCSE_Nov2018_3H"
+                    ]
+                },
+                "June 2017 GCSE Papers AQA": {
+                    "papers": [
+                        "9to1_AQA_2017_GCSE_1F",
+                        "9to1_AQA_2017_GCSE_1H",
+                        "9to1_AQA_2017_GCSE_2F",
+                        "9to1_AQA_2017_GCSE_2H",
+                        "9to1_AQA_2017_GCSE_3F",
+                        "9to1_AQA_2017_GCSE_3H"
+                    ]
+                },
+                "Shadow November 2021 GCSE Papers AQA": {
+                    "papers": [
+                        "9to1_SHADOW_9to1_AQA_GCSE_Nov2021_1F",
+                        "9to1_SHADOW_9to1_AQA_GCSE_Nov2021_1H",
+                        "9to1_SHADOW_9to1_AQA_GCSE_Nov2021_2F",
+                        "9to1_SHADOW_9to1_AQA_GCSE_Nov2021_2H",
+                        "9to1_SHADOW_9to1_AQA_GCSE_Nov2021_3F",
+                        "9to1_SHADOW_9to1_AQA_GCSE_Nov2021_3H"
+                    ]
+                },
+                "June 2017 AQA Papers abc Breakdown (AQA Analyser)": {
+                    "papers": [
+                        "9to1_AQA_June2017_GCSE_1F",
+                        "9to1_AQA_June2017_GCSE_1H",
+                        "9to1_AQA_June2017_GCSE_2F",
+                        "9to1_AQA_June2017_GCSE_2H",
+                        "9to1_AQA_June2017_GCSE_3F",
+                        "9to1_AQA_June2017_GCSE_3H"
+                    ]
+                },
+                "November 2017 GCSE Papers AQA": {
+                    "papers": [
+                        "9to1_AQA_Nov2017_GCSE_1F",
+                        "9to1_AQA_Nov2017_GCSE_1H",
+                        "9to1_AQA_Nov2017_GCSE_2F",
+                        "9to1_AQA_GCSE_nov2017_2H",
+                        "9to1_AQA_Nov2017_GCSE_3F",
+                        "9to1_AQA_Nov2017_GCSE_3H",
+                        "9to1_AQA_Nov2017_GCSE_1F_Analyser",
+                        "9to1_AQA_Nov2017_GCSE_1H_Analyser"
+                    ]
+                }
+            },
+            "AQA New Practice Papers from 2023": {
+                "AQA 2023 Practice Set 1": {
+                    "papers": [
+                        "AQA_2023_PracticeSet1_1F",
+                        "AQA_2023_PracticeSet1_1H",
+                        "AQA_2023_PracticeSet1_2F",
+                        "AQA_2023_PracticeSet1_2H",
+                        "AQA_2023_PracticeSet1_3F",
+                        "AQA_2023_PracticeSet1_3H"
+                    ]
+                },
+                "AQA 2023 Practice Set 2": {
+                    "papers": [
+                        "AQA_2023_PracticeSet2_1H",
+                        "AQA_2023_PracticeSet2_3F",
+                        "AQA_2023_PracticeSet2_3H"
+                    ]
+                },
+                "AQA 2023 Practice Set 3": {
+                    "papers": [
+                        "AQA_2023_PracticeSet3_1F",
+                        "AQA_2023_PracticeSet3_1H",
+                        "AQA_2023_PracticeSet3_2F",
+                        "AQA_2023_PracticeSet3_2H",
+                        "AQA_2023_PracticeSet3_3F",
+                        "AQA_2023_PracticeSet3_3H"
+                    ]
+                },
+                "AQA 2023 Practice Set 4": {
+                    "papers": [
+                        "AQA_2023_PracticeSet4_1F",
+                        "AQA_2023_PracticeSet4_1H",
+                        "AQA_2023_PracticeSet4_2F",
+                        "AQA_2023_PracticeSet4_2H",
+                        "AQA_2023_PracticeSet4_3F",
+                        "AQA_2023_PracticeSet4_3H"
+                    ]
+                }
+            },
+            "AQA Old Practice Papers prior to 2022": {
+                "AQA Practice Set 3": {
+                    "papers": [
+                        "9to1_AQA_PractiseSet3_1F",
+                        "9to1_AQA_PractiseSet3_1H",
+                        "9to1_AQA_PractiseSet3_2F",
+                        "9to1_AQA_PractiseSet3_2H",
+                        "9to1_AQA_PracticeSet3_3F",
+                        "9to1_AQA_PracticeSet3_3H"
+                    ]
+                },
+                "AQA Practice Set 3Whole Qns QLA": {
+                    "papers": [
+                        "9to1_AQA_PracticeSet3_1F_Whole_Qns",
+                        "9to1_AQA_PracticeSet3_1H_Whole_Qns",
+                        "9to1_AQA_PracticeSet3_2F_Whole_Qns",
+                        "9to1_AQA_PracticeSet3_2H_Whole_Qns",
+                        "9to1_AQA_PracticeSet3_3F_Whole_Qns",
+                        "9to1_AQA_PracticeSet3_3H_Whole_Qns"
+                    ]
+                },
+                "AQA Practice Set1 Papers": {
+                    "papers": [
+                        "9to1_AQA_Practice_Set1_1F",
+                        "9to1_AQA_Practice_Set1_1H",
+                        "9to1_AQA_Practice_Set1_2H",
+                        "9to1_AQA_Practice_Set1_2F",
+                        "9to1_AQA_Practice_Set1_3H",
+                        "9to1_AQA_Practice_Set1_3F"
+                    ]
+                },
+                "AQA Practice Set 2 Papers": {
+                    "papers": [
+                        "9to1_AQA_Practice_Set2_1F",
+                        "9to1_AQA_Practice_Set2_1H",
+                        "9to1_AQA_Practice_Set2_2F",
+                        "9to1_AQA_Practice_Set2_2H",
+                        "9to1_AQA_PracticeSet2_3F",
+                        "9to1_AQA_PracticeSet2_3H"
+                    ]
+                },
+                "AQA Practice Set4 Papers": {
+                    "papers": [
+                        "9to1_AQA_Practice_Set4_1H",
+                        "9to1_AQA_Practice_Set4_1F",
+                        "9to1_AQA_Practice_Set4_2H",
+                        "9to1_AQA_Practice_Set4_2F",
+                        "9to1_AQA_Practice_Set4_3F",
+                        "9to1_AQA_Practice_Set4_3H"
+                    ]
+                },
+                "AQA Specimen Set 2 Papers": {
+                    "papers": [
+                        "9to1_AQA_Specimen_2F",
+                        "9to1_AQA_Specimen_2H",
+                        "9to1_AQA_Specimen_3F",
+                        "9to1_AQA_Specimen_3H"
+                    ]
+                }
+            },
+            "papers": [
+                "AQA_KS3_Baseline_Test"
+            ]
+        },
+        "OCR": {
+            "June 2024 GCSE Papers OCR": {
+                "papers": [
+                    "9to1_GCSE_OCR_Summer2024_1F",
+                    "9to1_GCSE_OCR_Summer2024_2F",
+                    "9to1_GCSE_OCR_Summer2024_3F",
+                    "9to1_GCSE_OCR_Summer2024_4H",
+                    "9to1_GCSE_OCR_Summer2024_5H",
+                    "9to1_GCSE_OCR_Summer2024_6H"
+                ]
+            },
+            "November 2023 GCSE Papers OCR": {
+                "papers": [
+                    "9to1_GCSE_OCR_Nov2023_1F",
+                    "9to1_GCSE_OCR_Nov2023_2F",
+                    "9to1_GCSE_OCR_Nov2023_3F",
+                    "9to1_GCSE_OCR_Nov2023_4H",
+                    "9to1_GCSE_OCR_Nov2023_5H",
+                    "9to1_GCSE_OCR_Nov2023_6H"
+                ]
+            },
+            "June 2023 GCSE Papers OCR": {
+                "papers": [
+                    "9to1_GCSE_OCR_Summer2023_1F",
+                    "9to1_GCSE_OCR_Summer2023_2F",
+                    "9to1_GCSE_OCR_Summer2023_3F",
+                    "9to1_GCSE_OCR_Summer2023_4H",
+                    "9to1_GCSE_OCR_Summer2023_5H",
+                    "9to1_GCSE_OCR_Summer2023_6H"
+                ]
+            },
+            "November 2022 GCSE Papers OCR": {
+                "papers": [
+                    "9to1_GCSE_OCR_Nov2022_1F",
+                    "9to1_GCSE_OCR_Nov2022_2F",
+                    "9to1_GCSE_OCR_Nov2022_3F",
+                    "9to1_GCSE_OCR_Nov2022_4H",
+                    "9to1_GCSE_OCR_Nov2022_5H",
+                    "9to1_GCSE_OCR_Nov2022_6H"
+                ]
+            },
+            "June 2022 GCSE Papers OCR": {
+                "papers": [
+                    "9to1_GCSE_OCR_Summer2022_1F",
+                    "9to1_GCSE_OCR_Summer2022_2F",
+                    "9to1_GCSE_OCR_Summer2022_3F",
+                    "9to1_GCSE_OCR_Summer2022_4H",
+                    "9to1_GCSE_OCR_Summer2022_5H",
+                    "9to1_GCSE_OCR_Summer2022_6H"
+                ]
+            },
+            "November 2021 GCSE Papers OCR": {
+                "papers": [
+                    "9to1_GCSE_OCR_Nov2021_1F",
+                    "9to1_GCSE_OCR_Nov2021_2F",
+                    "9to1_GCSE_OCR_Nov2021_3F",
+                    "9to1_GCSE_OCR_Nov2021_4H",
+                    "9to1_GCSE_OCR_Nov2021_5H",
+                    "9to1_GCSE_OCR_Nov2021_6H"
+                ]
+            },
+            "November 2020 GCSE Papers OCR": {
+                "papers": [
+                    "9to1_GCSE_OCR_Nov2020_1F",
+                    "9to1_GCSE_OCR_Nov2020_2F",
+                    "9to1_GCSE_OCR_Nov2020_3F",
+                    "9to1_GCSE_OCR_Nov2020_4H",
+                    "9to1_GCSE_OCR_Nov2020_5H",
+                    "9to1_GCSE_OCR_Nov2020_3H"
+                ]
+            },
+            "June 2019 GCSE Papers OCR": {
+                "Official OCR QLA Versions": {
+                    "papers": [
+                        "9to1_OCR_GCSE_Summer2019_Paper1F_abc",
+                        "9to1_OCR_GCSE_Summer2019_Paper4H_abc"
+                    ]
+                },
+                "papers": [
+                    "9to1_OCR_GCSE_Summer2019_Paper1_Foundation",
+                    "9to1_OCR_GCSE_Summer2019_Paper2_Foundation",
+                    "9to1_OCR_GCSE_Summer2019_Paper3_Foundation",
+                    "9to1_OCR_GCSE_Summer2019_Paper4_Higher",
+                    "9to1_OCR_GCSE_Summer2019_Paper5_Higher",
+                    "9to1_OCR_GCSE_Summer2019_Paper6_Higher"
+                ]
+            },
+            "November 2019 GCSE Papers OCR": {
+                "papers": [
+                    "9to1_GCSE_OCR_Nov2019_1F",
+                    "9to1_GCSE_OCR_Nov2019_2F",
+                    "9to1_GCSE_OCR_Nov2019_3F",
+                    "9to1_GCSE_OCR_Nov2019_4H",
+                    "9to1_GCSE_OCR_Nov2019_5H",
+                    "9to1_GCSE_OCR_Nov2019_6H"
+                ]
+            },
+            "June 2018 GCSE Papers OCR": {
+                "papers": [
+                    "9to1_OCR_Summer2018_GCSE_Paper1_Foundation",
+                    "9to1_OCR_Summer2018_GCSE_Paper2_Foundation",
+                    "9to1_OCR_Summer2018_GCSE_Paper3_Foundation",
+                    "9to1_OCR_Summer2018_GCSE_Paper4_Higher",
+                    "9to1_OCR_Summer2018_GCSE_Paper5_Higher",
+                    "9to1_OCR_Summer2018_GCSE_Paper6_Higher"
+                ]
+            },
+            "Nov 2018 GCSE Papers OCR": {
+                "papers": [
+                    "Nov2018_Paper_1_Foundation",
+                    "9to1_OCR_Nov2018_Paper_2_Foundation",
+                    "9to1_OCR_Nov2018_Paper3_Foundation",
+                    "Nov2018_Paper_4_Higher",
+                    "9to1_OCR_Nov2018_Paper_5_Higher",
+                    "9to1_OCR_Nov2018_Paper_6_Higher"
+                ]
+            },
+            "June 2017 GCSE Papers OCR": {
+                "papers": [
+                    "9to1_OCR_2017_GCSE_Paper1_Foundation",
+                    "9to1_OCR_2017_GCSE_Paper2_Foundation",
+                    "9to1_OCR_2017_GCSE_Paper3_Foundation",
+                    "9to1_OCR_2017_GCSE_Paper4_Higher",
+                    "9to1_OCR_2017_GCSE_Paper5_Higher",
+                    "9to1_OCR_2017_GCSE_Paper6_Higher"
+                ]
+            },
+            "November 2017 GCSE Papers": {
+                "papers": [
+                    "9to1_OCR_Nov2017_Paper1_Foundation",
+                    "9to1_OCR_Nov2017_Paper2_Foundation",
+                    "9to1_OCR_Nov2017_Paper3_Foundation",
+                    "9to1_OCR_Nov2017_Paper4_Higher",
+                    "9to1_OCR_Nov2017_Paper5_Higher",
+                    "9to1_OCR_Nov2017_Paper6_Higher"
+                ]
+            },
+            "OCR Practice Set 1": {
+                "papers": [
+                    "OCR_Practice_set_1_paper_1",
+                    "OCR_Practice_set_1_paper_2",
+                    "OCR_Practice_set_1_paper_3",
+                    "OCR_Practice_set_1_paper_4",
+                    "OCR_Practice_set_1_paper_5",
+                    "OCR_Practice_set_1_paper_6"
+                ]
+            },
+            "OCR Practice Set 2": {
+                "papers": [
+                    "9to1_OCR_Practice_Set2_1F",
+                    "9to1_OCR_Practice_Set2_2F",
+                    "9to1_OCR_Practice_Set2_3F",
+                    "9to1_OCR_Practice_Set2_Paper4H",
+                    "9to1_OCR_Practice_Set2_Paper5H",
+                    "9to1_OCR_Practice_Set2_Paper6H"
+                ]
+            },
+            "OCR Practice Set 3": {
+                "papers": [
+                    "9to1_OCR_practice_set3_paper1_Foundation",
+                    "9to1_OCR_practice_set3_paper2_Foundation",
+                    "9to1_OCR_practice_set3_paper3_Foundation",
+                    "9to1_OCR_practice_set3_paper4_higher",
+                    "9to1_OCR_practice_set3_paper5_higher"
+                ]
+            },
+            "OCR SAMS": {
+                "papers": [
+                    "OCR_SAMS_1F",
+                    "OCR_SAMS_1H"
+                ]
+            },
+            "Advanced Info OCR OnMaths Predicted Papers": {
+                "papers": [
+                    "OnMaths_OCR_predicted_Summer_2022_H1",
+                    "OnMaths_OCR_predicted_Summer_2022_F1",
+                    "OnMaths_OCR_predicted_Summer_2022_H2",
+                    "OnMaths_OCR_predicted_Summer_2022_F2",
+                    "OnMaths_OCR_predicted_Summer_2022_H3",
+                    "OnMaths_OCR_predicted_Summer_2022_F3"
+                ]
+            },
+            "Advanced Info OCR Super User 1 Papers": {
+                "papers": [
+                    "Bespoke_OCR_Advanced_Info_22_P4H",
+                    "Bespoke_OCR_Advanced_Info_22_P5H",
+                    "Bespoke_Advanced_Info_OCR_P6H",
+                    "Bespoke_OCR_Advanced_Info_22_P1F",
+                    "Bespoke_OCR_Advanced_Info_22_P2F",
+                    "Bespoke_OCR_Advanced_Info_22_P3F"
+                ]
+            }
+        },
+        "PiXL": {
+            "Edexcel": {
+                "2017 Wave1 Papers": {
+                    "papers": [
+                        "PiXL_Wave1_2017_Edexcel_1F",
+                        "PiXL_Wave1_2017_Edexcel_1H",
+                        "PiXL_Wave1_2017_Edexcel_2F",
+                        "For 2H use the Main Edexcel Paper (Idenitcal PiXL Format)",
+                        "PiXL_Wave1_2017_Edexcel_3F",
+                        "PiXL_Wave1_2017_Edexcel_3H"
+                    ]
+                },
+                "Nov 2017 Wave 2 Papers": {
+                    "papers": [
+                        "PiXL_Wave2_Nov2017_Edexcel_1F",
+                        "PiXL_Wave2_Nov2017_Edexcel_1H"
+                    ]
+                },
+                "PiXL PPE September 2017 Edexcel Papers": {
+                    "papers": [
+                        "PiXL_PPE_September2017_Edexcel_1F",
+                        "PiXL_PPE_September2017_Edexcel_1H",
+                        "PiXL_PPE_September2017_Edexcel_3F",
+                        "PiXL_PPE_September2017_Edexcel_3H",
+                        "PiXL_PPE_September2017_Edexcel_2F",
+                        "PiXL_PPE_September2017_Edexcel_2H"
+                    ]
+                },
+                "PiXL PPE May 2017 Edexcel Papers": {
+                    "papers": [
+                        "PiXL_PPE_May2017_Edexcel_2H",
+                        "PiXL_PPE_May2017_Edexcel_3H"
+                    ]
+                },
+                "PIXL PPE March Edexcel Papers": {
+                    "papers": [
+                        "PiXL_PPE_March_Edexcel_1F",
+                        "PiXL_PPE_March_Edexcel_1H",
+                        "PiXL_PPE_March_Edexcel_2F",
+                        "PiXL_PPE_March_Edexcel_2H",
+                        "PiXL_PPE_March_Edexcel_3F",
+                        "PiXL_PPE_March_Edexcel_3H"
+                    ]
+                },
+                "PIXL EOY10 June2016 Edexcel Papers": {
+                    "papers": [
+                        "9to1_PIXL_EOY10_June2016_Edexcel_1F",
+                        "9to1_PIXL_EOY10_June2016_Edexcel_1H",
+                        "9to1_PIXL_EOY10_June2016_Edexcel_2F",
+                        "9to1_PIXL_EOY10_June2016_Edexcel_2H",
+                        "9to1_PIXL_EOY10_June2016_Edexcel_3F",
+                        "9to1_PIXL_EOY10_June2016_Edexcel_3H"
+                    ]
+                },
+                "PIXL Nov16 Edexcel PPE Papers": {
+                    "papers": [
+                        "PIXL_Nov16_Edexcel_PPE_1F",
+                        "PIXL_Nov16_Edexcel_PPE_1H",
+                        "PIXL_Nov16_Edexcel_PPE_2F",
+                        "PIXL_Nov16_Edexcel_PPE_2H",
+                        "PIXL_Nov16_Edexcel_PPE_3F",
+                        "PIXL_Nov16_Edexcel_PPE_3H"
+                    ]
+                }
+            },
+            "OCR": {
+                "2017 Wave1 Papers": {
+                    "papers": [
+                        "PiXL_Wave1_2017_OCR_Paper1_Foundation",
+                        "For P2 to 6 use Main OCR Papers (Idenitcal PiXL Format)"
+                    ]
+                }
+            },
+            "AQA": {
+                "PIXL EOY10 June2016 AQA Papers": {
+                    "papers": [
+                        "9to1_PIXL_EOY10_June2016_AQA_1F",
+                        "9to1_PIXL_EOY10_June2016_AQA_1H",
+                        "9to1_PIXL_EOY10_June2016_AQA_2F",
+                        "9to1_PIXL_EOY10_June2016_AQA_2H",
+                        "9to1_PIXL_EOY10_June2016_AQA_3F",
+                        "9to1_PIXL_EOY10_June2016_AQA_3H"
+                    ]
+                }
+            }
+        },
+        "LGfL": {
+            "papers": [
+                "LGfL_Mock_Set1_1F",
+                "LGfL_Mock_Set1_1H",
+                "LGfL_Mock_Set1_2F",
+                "LGfL_Mock_Set1_2H"
+            ]
+        },
+        "Zigzag": {
+            "papers": [
+                "Bespoke_Zigzag_Edexcel_Set_4_Paper_2"
+            ]
+        },
+        "MthsWtch": {
+            "papers": [
+                "Mathswatch_AQA_June2019_1H",
+                "Mathswatch_AQA_June2019_2H",
+                "Mathswatch_AQA_June2019_3H",
+                "Mathswatch_Edexcel_June2018_1F",
+                "Mathswatch_Edexcel_June2018_2F",
+                "Mathswatch_Edexcel_June2018_3F"
+            ]
+        },
+        "UL": {
+            "End of Year Exams": {
+                "End of Year 2022": {
+                    "papers": [
+                        "UL_2022_EoY_Y10_1F",
+                        "UL_2022_EoY_Y10_1H",
+                        "UL_2022_EoY_Y10_2F",
+                        "UL_2022_EoY_Y10_2H",
+                        "UL_2022_EoY_Y9_Paper_1",
+                        "UL_2022_EoY_Y9_Paper_2"
+                    ]
+                },
+                "End of Year 2021": {
+                    "papers": [
+                        "UL_Year7_EoYPaper_2021",
+                        "UL_Year8_EoYPaper_2021",
+                        "UL_Year9_EoYPaper_2021",
+                        "UL_Year10_EoY_FoundationPaper_2021",
+                        "UL_Year10_EoY_HigherPaper_2021_"
+                    ]
+                },
+                "End of Year 2020": {
+                    "papers": [
+                        "UL_Year7_EoY_Paper1",
+                        "UL_Year7_EoY_Paper2",
+                        "UL_Year8_EoY_Paper1",
+                        "UL_Year8_EoY_Paper2",
+                        "UL_Year9_EOY_NC",
+                        "UL_Year9_EOY_C",
+                        "UL_Year10_EoY_NC_F",
+                        "UL_Year10_EoY_NC_H",
+                        "UL_Year10_EoY_C_F",
+                        "UL_Year10_EoY_C_H"
+                    ]
+                }
+            },
+            "HT4 (April)": {
+                "papers": [
+                    "UL_Year7_HT4",
+                    "UL_Year8_HT4",
+                    "UL_Year9_HT4",
+                    "UL_Year10_HT10_Foundation",
+                    "UL_Year10_HT10_Higher"
+                ]
+            },
+            "HT3 (Feburary)": {
+                "papers": [
+                    "UL_Year10_HT3",
+                    "UL_Year8_HT3",
+                    "UL_Year9_HT3",
+                    "UL_Year7_HT3"
+                ]
+            },
+            "Mid Year Assessments": {
+                "papers": [
+                    "UL_Year10_Mid_Year_2022",
+                    "UL_Year9_Mid_Year_2022",
+                    "UL_Year8_Mid_Year_2023",
+                    "UL_Year9_Mid_Year_2023",
+                    "UL_Year10_Mid_Year_2023"
+                ]
+            },
+            "HT1 (Oct)": {
+                "papers": [
+                    "UL_Year7_HT1",
+                    "UL_Year8_HT1",
+                    "UL_Year9_HT1",
+                    "UL_Year10_HT1",
+                    "UL_Year10_HT1_Version2"
+                ]
+            }
+        },
+        "Dixons": {
+            "Autumn 2024 Year 11 Mocks": {
+                "papers": [
+                    "Dixons_Y11_Nov_Mock2024_1F",
+                    "Dixons_Y11_Nov_Mock2024_1H",
+                    "Dixons_Y11_Nov_Mock2024_2F",
+                    "Dixons_Y11_Nov_Mock2024_2H",
+                    "Dixons_Y11_Nov_Mock2024_3F",
+                    "Dixons_Y11_Nov_Mock2024_3H"
+                ]
+            },
+            "Summer 2024 Year 10 Mocks": {
+                "papers": [
+                    "Dixons_Y10_C3_202324_1H",
+                    "Dixons_Y10_C3_202324_1Int",
+                    "Dixons_Y10_C3_202324_1F"
+                ]
+            },
+            "Spring 2024 Year 11 Mocks": {
+                "papers": [
+                    "Dixons_Y11_Spring_Mock2024_1H",
+                    "Dixons_Y11_Spring_Mock2024_1F",
+                    "Dixons_Y11_Spring_Mock2024_2H",
+                    "Dixons_Y11_Spring_Mock2024_2F",
+                    "Dixons_Y11_Spring_Mock2024_3H",
+                    "Dixons_Y11_Spring_Mock2024_3F"
+                ]
+            },
+            "Autumn 2023 Year 11 Mocks": {
+                "papers": [
+                    "Dixons_Y11_Nov_Mock2023_1F",
+                    "Dixons_Y11_Nov_Mock2023_1H",
+                    "Dixons_Y11_Nov_Mock2023_2F",
+                    "Dixons_Y11_Nov_Mock2023_2H",
+                    "Dixons_Y11_Nov_Mock2023_3F",
+                    "Dixons_Y11_Nov_Mock2023_3H"
+                ]
+            },
+            "Spring 2023 Year 11 Mocks": {
+                "papers": [
+                    "Dixons_Y11_Spr_Mock2023_1H",
+                    "Dixons_Y11_Spr_Mock2023_1F",
+                    "Dixons_Y11_Spr_Mock2023_2F",
+                    "Dixons_Y11_Spr_Mock2023_3F",
+                    "Dixons_Y11_Spr_Mock2023_2H",
+                    "Dixons_Y11_Spr_Mock2023_3H"
+                ]
+            },
+            "Other Papers": {
+                "papers": [
+                    "Bespoke_Y10_C1_Paper_1F",
+                    "Bespoke_Y10_C1_Paper_1H",
+                    "Bespoke_Dixons_Spring_Mock_1H",
+                    "Bespoke_Dixons_Spring_Mock_2H",
+                    "Bespoke_Dixons_Spring_Mock_3H",
+                    "Dixons_Spring_Mock_1F",
+                    "Dixons_Spring_Mock_2F",
+                    "Dixons_Spring_Mock_3F",
+                    "Dixons_2022_C3_Y10_1H",
+                    "Dixons_2022_C3_Y10_1F",
+                    "Dixons_2022_C3_Y9_1F",
+                    "Dixons_2022_C3_Y10_2H",
+                    "Dixons_2022_C3_Y9_1H",
+                    "Dixons_2022_C3_Y10_2F",
+                    "Dixons_2022_C3_Y9_2H",
+                    "Dixons_Y11_Nov_Mock_1H",
+                    "Dixons_Y11_Nov_Mock_2022_1F",
+                    "Dixons_Y11_Nov_Mock_2022_2F",
+                    "Dixons_Y11_Nov_Mock_2022_3F",
+                    "Dixons_Y11_Nov_Mock_2H",
+                    "Dixons_Y11_Nov_Mock_2022_3H",
+                    "White_Rose_Year_9_Autumn_B_Foundation",
+                    "White_Rose_Year_9_Autumn_B_Core",
+                    "White_Rose_Year_9_Autumn_B_Higher",
+                    "White_Rose_Year_7_Autumn_B_Foundation"
+                ]
+            }
+        },
+        "Harris": {
+            "Y11 Mocks Spring 2022": {
+                "papers": [
+                    "Harris_Y11_Spring_Mocks_1F",
+                    "Harris_Y11_Spring_Mocks_1H",
+                    "Harris_Y11_Spring_Mocks_2F",
+                    "Harris_Y11_Spring_Mocks_2H",
+                    "Harris_Y11_Spring_Mocks_3F",
+                    "Harris_Y11_Spring_Mocks_3H"
+                ]
+            },
+            "Spring Assessments 2021": {
+                "papers": [
+                    "Harris_Spring_Y10_1F",
+                    "Harris_Spring_Y10_1H",
+                    "Harris_Spring_Y10_2F",
+                    "Harris_Spring_Y10_2H"
+                ]
+            },
+            "Harris Mocks Nov 2021": {
+                "papers": [
+                    "Harris_Nov_Mocks_Paper_1F",
+                    "Harris_Nov_Mocks_Paper_1H",
+                    "Harris_Nov_Mocks_Paper_2F",
+                    "Harris_Nov_Mocks_Paper_2H"
+                ]
+            },
+            "Harris Mocks 2020": {
+                "papers": [
+                    "HARRIS_9to1_AQA_Summer2018_GCSE_1F",
+                    "HARRIS_9to1_AQA_Summer2018_GCSE_1H",
+                    "HARRIS_9to1_AQA_Summer2018_GCSE_3F",
+                    "HARRIS_9to1_AQA_Summer2018_GCSE_3H"
+                ]
+            },
+            "Harris Mocks Nov 2018": {
+                "papers": [
+                    "9to1_Harris_AQA_Summer2018_GCSE_1F",
+                    "9to1_Harris_AQA_Summer2018_GCSE_1H",
+                    "9to1_Harris_AQA_Summer2018_GCSE_2F",
+                    "9to1_Harris_AQA_Summer2018_GCSE_2H",
+                    "9to1_Harris_AQA_Summer2018_GCSE_3F",
+                    "9to1_Harris_AQA_Summer2018_GCSE_3H"
+                ]
+            }
+        },
+        "Together Learning": {
+            "papers": [
+                "TL_Y11_AW1_F",
+                "TL_Y11_AW1_H"
+            ]
+        },
+        "The Two Counties Trust": {
+            "papers": [
+                "TTCT_End_of_Y9_2022_P1",
+                "TTCT_End_of_Y9_2022_P2",
+                "TTCT_Year_9_EoY_Paper_1_2024",
+                "TTCT_Year_9_EoY_Paper_2_2024"
+            ]
+        },
+        "Westcountry Schools Trust": {
+            "WeST 2024": {
+                "papers": [
+                    "WeST_Year_10_EOY_2024_Foundation_P1",
+                    "WeST_Year_10_EOY_2024_Higher_P1",
+                    "WeST_Year_10_EOY_2024_Foundation_P2",
+                    "WeST_Year_10_EOY_2024_Higher_P2"
+                ],
+                "Term Tests": {
+                    "papers": [
+                        "West_Year_10F"
+                    ]
+                }
+            },
+            "WeST 2023": {
+                "papers": [
+                    "WeST_Year_10_EOY_2023_Higher_P1",
+                    "WeST_Year_10_EOY_2023_Higher_P2",
+                    "WeST_Year_10_EOY_2023_Foundation_P1",
+                    "WeST_Year_10_EOY_2023_Foundation_P2"
+                ]
+            }
+        },
+        "Mossbourne": {
+            "papers": [
+                "2023_NovDec_Mocks_Paper1F",
+                "2023_NovDec_Mocks_Paper1H",
+                "2023_NovDec_Mocks_Paper2F",
+                "2023_NovDec_Mocks_Paper2H",
+                "2023_NovDec_Mocks_Paper3F",
+                "2023_NovDec_Mocks_Paper3H"
+            ]
+        }
+    },
+    "A*-G Specification": {
+        "Edexcel": {
+            "Edexcel 2017 Legacy Papers": {
+                "papers": [
+                    "Legacy_GCSE_Edexcel_Summer2017_1F",
+                    "Legacy_GCSE_Edexcel_Summer2017_1H"
+                ]
+            },
+            "Nov16 Papers": {
+                "papers": [
+                    "Nov16nc",
+                    "Nov16nc_Foundation",
+                    "Nov16c",
+                    "Nov16c_Foundation"
+                ]
+            },
+            "June16 Papers": {
+                "papers": [
+                    "June16nc",
+                    "June16c",
+                    "June16nc_Foundation",
+                    "June16c_Foundation"
+                ]
+            },
+            "Nov15 Papers": {
+                "papers": [
+                    "Nov15c",
+                    "Nov15nc",
+                    "Nov15c_Foundation",
+                    "Nov15nc_Foundation"
+                ]
+            },
+            "June15 Papers": {
+                "papers": [
+                    "June15nc",
+                    "June15c",
+                    "June15nc_Foundation",
+                    "June15c_Foundation"
+                ]
+            },
+            "Edexcel_Mock_Autumn_2015 Papers": {
+                "papers": [
+                    "Edexcel_Mock_15c",
+                    "Edexcel_Mock_15nc"
+                ]
+            },
+            "Nov14 Papers": {
+                "papers": [
+                    "Nov14nc",
+                    "Nov14c",
+                    "Nov14nc_Foundation",
+                    "Nov14c_Foundation"
+                ]
+            },
+            "June14 Papers": {
+                "papers": [
+                    "June14nc",
+                    "June14c",
+                    "June14nc_Foundation",
+                    "June14c_Foundation"
+                ]
+            },
+            "Nov13 Papers": {
+                "papers": [
+                    "Nov13nc",
+                    "Nov13c"
+                ]
+            },
+            "June13 Papers": {
+                "papers": [
+                    "June13nc",
+                    "June13c",
+                    "June13nc_Foundation"
+                ]
+            },
+            "March13 Papers": {
+                "papers": [
+                    "March13nc",
+                    "March13c"
+                ]
+            },
+            "Nov12 Papers": {
+                "papers": [
+                    "Nov12nc",
+                    "Nov12c"
+                ]
+            },
+            "June12 Papers": {
+                "papers": [
+                    "June12nc",
+                    "June12c",
+                    "June12nc_Foundation",
+                    "June12c_Foundation"
+                ]
+            },
+            "March12 Papers": {
+                "papers": [
+                    "March12nc",
+                    "March12c"
+                ]
+            },
+            "June11 Papers": {
+                "papers": [
+                    "June11nc",
+                    "June11c",
+                    "9to1_Edexcel_Secure_Mock2F",
+                    "13plus_ISEB_Jan12_lvl2_calc",
+                    "June2004_nc_Foundation",
+                    "PA_Cycle_1_9H",
+                    "PA_Cycle1_9F",
+                    "KS3_NonCalc_Y8H1",
+                    "Paddington_Cycle_2_Year9_H"
+                ]
+            }
+        },
+        "AQA": {
+            "AQA 2017 Legacy Papers": {
+                "papers": [
+                    "Legacy_AQA_2017_GCSE_1H",
+                    "Legacy_AQA_2017_GCSE_1F",
+                    "UL_EOY_Y9_NC"
+                ]
+            },
+            "June16 AQA Papers": {
+                "papers": [
+                    "June16nc_AQA",
+                    "June16c_AQA",
+                    "June16nc_AQA_1F",
+                    "June2016_AQA_2F"
+                ]
+            },
+            "Nov15_AQA Papers": {
+                "papers": [
+                    "Nov15nc_AQA",
+                    "Nov15c_AQA",
+                    "Nov15nc_AQA_Foundation",
+                    "Nov15c_AQA_Foundation"
+                ]
+            },
+            "June15_AQA Papers": {
+                "papers": [
+                    "June15nc_AQA",
+                    "June15c_AQA",
+                    "June15nc_AQA_Foundation",
+                    "June15c_AQA_Foundation"
+                ]
+            },
+            "papers": [
+                "KS3_NonCalc_Y8_F1"
+            ]
+        },
+        "OCR": {
+            "OCR 2016 Papers": {
+                "papers": [
+                    "OCR_GCSE_Summer2016_1F",
+                    "OCR_GCSE_Summer2016_1H"
+                ]
+            },
+            "OCR 2015 Papers": {
+                "papers": [
+                    "OCR_Nov_15_Foundation_Non_Calc",
+                    "OCR_Nov_15_Foundation_Calc"
+                ]
+            },
+            "papers": [
+                "OCR_June2012_GCSE_Paper1_NonCalc_Foundation",
+                "OCR_March_2013_Calc_Paper2_Foundation"
+            ]
+        }
+    },
+    "White Rose": {
+        "Free Autumn": {
+            "papers": [
+                "WhiteRose_Year7_Autumn_Core",
+                "WhiteRose_Year7_Autumn_Foundation",
+                "WhiteRose_Year7_Autumn_Higher",
+                "WhiteRose_Year8_Autumn_Core",
+                "WhiteRose_Year8_Autumn_Foundation",
+                "WhiteRose_Year8_Autumn_Higher",
+                "WhiteRose_Year9_Autumn_Core",
+                "Bespoke_WRM_Year9_Higher_Dec20",
+                "Bespoke_WRM_Year9_Foundation_Dec20",
+                "WhiteRose_Year10_Autumn_1F",
+                "WhiteRose_Year10_Autumn_2F",
+                "WhiteRose_Year10_Autumn_3H",
+                "WhiteRose_Year10_Autumn_4H"
+            ]
+        },
+        "Free Spring": {
+            "papers": [
+                "Bespoke_WRM_Y7_Spring_Foundation",
+                "Bespoke_WRM_Y7_Spring_Higher",
+                "Bespoke_WRM_Y8_Spring_Core",
+                "Bespoke_WRM_Y8_Spring_Higher",
+                "Bespoke_WRM_Y8_Spring_Foundation",
+                "WR_Spring_Y8_Core",
+                "WRM_Spring2021_Y10_1F",
+                "WRM_Spring2021_Y10_2F",
+                "WRM_Spring2021_Y10_3H",
+                "WRM_Spring2021_Y10_4H"
+            ]
+        },
+        "Free Summer": {
+            "papers": [
+                "WRM_Year7_Summer_Core",
+                "WRM_Year8_Summer_Core",
+                "WRM_Year8_Summer_Foundation",
+                "WRM_Year8_Summer_Higher"
+            ]
+        },
+        "Premium Spring 2022": {
+            "papers": [
+                "WRpremium_Spring2022_Y9_CoreB",
+                "WRpremium_Spring2022_Y9_FoundationB",
+                "WRpremium_Spring2022_Y9_HigherB"
+            ]
+        },
+        "Premium Autumn 2021": {
+            "papers": [
+                "WR_Autumn2021_Y9_Foundation_B",
+                "WRpremium_Autumn2021_Y9_CoreB"
+            ]
+        },
+        "Premium Summer 2021": {
+            "papers": [
+                "WR_Summer2021_Y7_Core",
+                "WR_Summer2021_Y7_Foundation",
+                "WR_Summer2021_Y7_Higher"
+            ]
+        },
+        "Premium Spring 2021": {
+            "papers": [
+                "WR_Spring2021_Y7_Foundation",
+                "WR_Spring2021_Y7_Higher",
+                "WRpremium_Spring2021_Y8_Core",
+                "WRpremium_Spring2021_Y8_Higher",
+                "WRpremium_Spring2021_Y8_FoundationB"
+            ]
+        },
+        "Premium Autumn 2020": {
+            "papers": [
+                "WR_Autumn2020_Y7_Core",
+                "WR_Autumn2020_Y8_Core",
+                "WR_Autumn2020_Y9_Core",
+                "WR_Autumn2020_Y7_Higher",
+                "WR_Autumn2020_Y8_Foundation",
+                "WR_Autumn2020_Y8_Higher",
+                "WR_Autumn2020_Y7_FoundationB"
+            ]
+        }
+    },
+    "iGCSE": {
+        "Edexcel iGCSE": {
+            "9to1 iGCSE": {
+                "papers": [
+                    "Summer 2024",
+                    "Autumn 2023",
+                    "Autumn 2022",
+                    "Spring 2022",
+                    "Autumn 2021"
+                ],
+                "Summer 2023": {
+                    "papers": [
+                        "Edexcel_iGCSE_June2023_4MA1_1F",
+                        "Edexcel_iGCSE_June2023_4MA1_2F",
+                        "Edexcel_iGCSE_June2023_4MA1_1H",
+                        "Edexcel_iGCSE_June2023_4MA1_2H"
+                    ]
+                },
+                "Spring 2023": {
+                    "papers": [
+                        "Edexcel_iGCSE_Jan2023_4MA1_1F",
+                        "Edexcel_iGCSE_Jan2023_4MA1_1H",
+                        "Edexcel_iGCSE_Jan2023_4MA1_2F",
+                        "Edexcel_iGCSE_Jan2023_4MA1_2H"
+                    ]
+                },
+                "Summer 2022": {
+                    "papers": [
+                        "Edexcel_iGCSE_June2022_4MA1_1F"
+                    ]
+                },
+                "Summer 2021": {
+                    "papers": [
+                        "Edexcel_IGCSE_June21_1H"
+                    ]
+                },
+                "Spring 2021": {
+                    "papers": [
+                        "IGCSE_January_2021_1HR"
+                    ]
+                },
+                "Autumn 2020": {
+                    "papers": [
+                        "IGCSE_Nov_2020_1H",
+                        "IGCSE_Nov_2020_2H",
+                        "IGCSE_November_2020_P4_VERSION_42__EXTENDED_",
+                        "IGCSE_Nov_2020_P2_VERSION_21__EXTENDED_"
+                    ]
+                },
+                "Summer 2020": {
+                    "papers": [
+                        "IGCSE_June_2020_P2__EXTENDED_",
+                        "IGCSE_June_2020_P4__EXTENDED_",
+                        "IGCSE_JUNE_2020_1HR",
+                        "IGCSE_June_2020_P2_VERSION_23__EXTENDED_",
+                        "IGCSE_June_2020_P2_VERSION_22__EXTENDED_",
+                        "IGCSE_June_2020_P4_VERSION_23__EXTENDED_"
+                    ]
+                },
+                "Spring 2020": {
+                    "papers": [
+                        "Bespoke_Bespoke_Edexcel_iGCSE_4MA1_2HR_Jan20",
+                        "Edexcel_iGCSE_4MA1_1HR_Jan20",
+                        "Edexcel_iGCSE_4MA1_1FR_Jan20",
+                        "Edexcel_iGCSE_4MA1_2FR_Jan20"
+                    ]
+                },
+                "Summer 2019": {
+                    "papers": [
+                        "Bespoke_Edexcel_iGCSE_4MA1_1H_May19",
+                        "Bespoke_9_to_1IGCSE_Paper_2H_June_2019",
+                        "Bespoke_Edexcel_iGCSE_June_2019_1HR",
+                        "Bespoke_Edexcel_iGCSE_June_2019_2HR"
+                    ]
+                },
+                "Spring 2019": {
+                    "papers": [
+                        "Bespoke_Edexcel_iGCSE_4MA1_1F_Jan19",
+                        "Bespoke_Edexcel_iGCSE_4MA1_1H_Jan19",
+                        "Bespoke_Edexcel_iGCSE_4MA1_2F_Jan19",
+                        "Bespoke_Edexcel_iGCSE_4MA1_2H_Jan19",
+                        "Bespoke_Edexcel_iGCSE_4MA1_1HR_Jan19",
+                        "Bespoke_Edexcel_iGCSE_4MA1_23HR_Jan19",
+                        "Bespoke_IGCSE_January_2019_Paper_1F",
+                        "Bespoke_IGCSE_January_2019_Paper_2F",
+                        "Edexcel_iGCSE_4MA1_1FR_Jan19"
+                    ]
+                },
+                "Summer 2018": {
+                    "papers": [
+                        "Bespoke_Edexcel_IGCSE_4MA1_1F_Jun18",
+                        "Edexcel_IGCSE_4MA1_1H_Jun18",
+                        "Edexcel_IGCSE_4MA1_2F_Jun18",
+                        "Edexcel_IGCSE_4MA1_2H_Jun18",
+                        "Bespoke_June_2018_4MA1_1FR",
+                        "Bespoke_Edexcel_iGCSE_4MA1_1HR_May18",
+                        "IGCSE_4MA1_June_2018_2HR",
+                        "Edexcel_iGCSE_4MA1_2FR_Jun18"
+                    ],
+                    "Alternative Versions": {
+                        "papers": [
+                            "Bespoke_June_2018_4MA1_1H",
+                            "Bespoke_IGCSE_January_2019_1FR",
+                            "Bespoke_Edexcel_IGCSE_2F_Jun_2018",
+                            "Bespoke_IGCSE_Edexcel_4Ma1_PP2F"
+                        ]
+                    }
+                },
+                "SAMS_Specimen": {
+                    "papers": [
+                        "IGCSE_4MA1_1H_Specimen",
+                        "Edexcel_iGCSE_4MA1_SAM1_1F"
+                    ]
+                }
+            },
+            "Legacy iGCSE": {
+                "Spring 2018": {
+                    "papers": [
+                        "Edexcel_IGCSE_JAN18_2F",
+                        "Edexcel_IGCSE_JAN18_4H"
+                    ]
+                },
+                "papers": [
+                    "Bespoke_IGCSE_January_2014_3H",
+                    "Bespoke_IGCSE_May_2014_4H",
+                    "Bespoke_IGCSE_June2015_3H",
+                    "Bespoke_IGCSE_January_2015_4H",
+                    "IGCSE_4MA0_3H_May_2016",
+                    "Edexcel_iGCSE_4MA0_3H_May2018_Legacy",
+                    "IGCSE_June_2017_P2__EXTENDED_",
+                    "IGCSE_Nov_2016_P4__EXTENDED_"
+                ]
+            }
+        },
+        "CIE iGCSE": {
+            "papers": [
+                "Bespoke_Nov_2018_CIE_0580_12",
+                "Bespoke_Nov_2018_CIE_0580_32",
+                "Bespoke_June2017_CIE_IGCSE_June_12_Paper_1",
+                "Bespoke_June2017_CIE_IGCSE_June_12_Paper_3",
+                "Bespoke_June2016_CIE_IGCSE_0580_12_Paper_1",
+                "June_2016_CIE_IGCSE_0580_22_Paper_2",
+                "Bespoke_June2016_CIE_IGCSE_0580_32_Paper_3",
+                "June_2016_CIE_IGCSE_0580_42_Paper_4",
+                "Bespoke_CIE_June_2015_Paper_1__region_2_"
+            ]
+        }
+    },
+    "WJEC": {
+        "WJEC 2019": {
+            "papers": [
+                "Bespoke_2019_Summer_WJEC_Unit_1_Foundation_Non_Calculator",
+                "Bespoke_2019_June_WJEC_Maths_Unit_1_Non_Calculator_Intermediate_",
+                "Bespoke_2019_Summer_WJEC_Maths_Unit_1_Non_Calculator_Higher_",
+                "Bespoke_WJEC_June_2019_Foundation_Maths_Unit_2",
+                "Bespoke_WJEC_June_2019_Intermediate_Unit_2_Maths_",
+                "Bespoke_WJEC_June_2019_Higher_Maths_Unit_2",
+                "Bespoke_WJEC_Numeracy_High_U1_June19",
+                "Bespoke_WJEC_NUMERACY_Inter_U1_Jun19",
+                "Bespoke_WJEC_F_NON_CAL_SUMMER_2019"
+            ]
+        },
+        "WJEC 2018": {
+            "WJEC Summer 2018": {
+                "papers": [
+                    "Bespoke_WJEC_Maths_High_U1_Jun18",
+                    "Bespoke_WJEC_Maths_Inter_U1_Jun18",
+                    "Bespoke_WJEC_MATHS_Found_U1Jun18",
+                    "Bespoke_Wjec_Maths_Inter_Unit2_Jun18",
+                    "Bespoke_WJEC_MATHS_Found_U2_Jun18",
+                    "Bespoke_WJEC_Numeracy_June2018_P1_Higher",
+                    "Bespoke_WJEC_NUMERACY_Int_U2_Jun18",
+                    "Bespoke_WJEC_Numeracy_June_2018_P1",
+                    "Bespoke_WJEC_Numeracy_Summer_2018_P2",
+                    "Bespoke_WJEC_F_NON_CAL_Summer_2018"
+                ]
+            },
+            "WJEC Autumn 2018": {
+                "papers": [
+                    "Bespoke_WJEC_F_NON_CAL_Autumn_2018",
+                    "Bespoke_WJEC_Autumn_2018_Calculator"
+                ]
+            }
+        },
+        "papers": [
+            "WJEC 2017"
+        ],
+        "WJEC 2016": {
+            "papers": [
+                "Bespoke_WJEC_Maths_Higher_U1_Nov16",
+                "Bespoke_WJEC_Maths_Higher_U2_Nov16",
+                "Bespoke_WJEC_Maths_Inter_U1_Nov16",
+                "Bespoke_WJEC_Maths_Inter_U2_Nov16",
+                "Bespoke_WJEC_Maths_Found_U1_Nov16",
+                "Bespoke_WJEC_Maths_Found_U2_Nov16",
+                "Bespoke_WJEC_Maths_Nov_16_Inter_U1"
+            ]
+        }
+    },
+    "Eduqas": {
+        "Eduqas 2024": {
+            "papers": [
+                "Eduqas_Summer2024_1F",
+                "Eduqas_Summer2024_1H",
+                "Eduqas_Summer2024_2F",
+                "Eduqas_Summer2024_2H"
+            ]
+        },
+        "Eduqas 2023": {
+            "papers": [
+                "Eduqas_Summer2023_1F",
+                "Eduqas_Summer2023_1H",
+                "Eduqas_Summer2023_2F",
+                "Eduqas_Summer2023_2H",
+                "Eduqas_Autumn2023_1F",
+                "Eduqas_Autumn2023_1H",
+                "Eduqas_Autumn2023_2F",
+                "Eduqas_Autumn2023_2H"
+            ]
+        },
+        "Eduqas 2022": {
+            "papers": [
+                "Eduqas_Summer2022_2H",
+                "Eduqas_Summer2022_2F",
+                "Eduqas_Summer2022_1F",
+                "Eduqas_Summer2022_1H",
+                "Eduqas_Autumn2022_2H",
+                "Eduqas_Autumn2022_1H",
+                "Eduqas_Autumn2022_1F",
+                "Eduqas_Autumn2022_2F"
+            ]
+        },
+        "Eduqas 2021": {
+            "papers": [
+                "Eduqas_Autumn2021_1F",
+                "Eduqas_Autumn2021_2F",
+                "Eduqas_Autumn2021_1H",
+                "Eduqas_Autumn2021_2H"
+            ]
+        },
+        "Eduqas 2020": {
+            "papers": [
+                "Eduqas_Autumn2020_1F",
+                "Eduqas_Autumn2020_2F",
+                "Eduqas_Autumn2020_1H",
+                "Eduqas_Autumn2020_2H"
+            ]
+        },
+        "Eduqas 2019": {
+            "papers": [
+                "Eduqas_Nov2019_Paper_1F",
+                "Eduqas_Nov2019_Paper_1H",
+                "Eduqas_Nov2019_Paper_2F",
+                "Eduqas_Nov2019_Paper_2H",
+                "Bespoke_Eduqas_Paper_1F_nov_2019",
+                "Bespoke_Educqas_May19_Foundation_Paper1",
+                "Bespoke_Eduqas_May19_Higher_Paper1",
+                "Bespoke_Eduqas_Paper_1_F_2019",
+                "Bespoke_Eduqas_Paper_2F_2019",
+                "Eduqas_Summer2019_1F",
+                "Eduqas_Summer2019_1H",
+                "Eduqas_Summer2019_2F",
+                "Eduqas_Summer2019_2H"
+            ]
+        },
+        "Eduqas 2018": {
+            "papers": [
+                "Bespoke_Eduqas_Foundation_Non_Calculator_May_2018",
+                "Bespoke_Eduqas_June_2018_Higher_Paper_1",
+                "Bespoke_Bespoke_Eduqas_Foundation_Calculator_June_2018",
+                "Bespoke_Eduqas_November_2018_Foundation___Paper_1_",
+                "Bespoke_Eduqas_November_2018_Higher___Paper_1_",
+                "Bespoke_Eduqas_Nov_18_Foundation_Paper_2",
+                "Bespoke_Eduqas_A18_Paper_2_H"
+            ],
+            "alternative versions": {
+                "papers": [
+                    "Bespoke_Eduqas_June_2018_Paper_1_F"
+                ]
+            }
+        },
+        "Eduqas 2017": {
+            "papers": [
+                "Eduqas_Nov2017_Paper_1F",
+                "Bespoke_Dec_mock_paper_1_foundation__EDUQAS_2017_sumer_",
+                "Bespoke_Dec_mock_paper_1_higher__EDUQAS_2017_summer_",
+                "Bespoke_Bespoke_Dec_mock_paper_2_Foundation_EDUQAS_Summer_2017",
+                "Bespoke_Bespoke_Dec_mock_paper_2_Higher_EDUQAS_Summer_2017"
+            ]
+        }
+    },
+    "Primary": {
+        "The National Curriculum Tests (The KS2 SATS)": {
+            "Arithmetic Papers": {
+                "papers": [
+                    "2015_KS2_Sample_Paper1",
+                    "2016_KS2_Paper1",
+                    "2017_KS2_Paper1",
+                    "2018_KS2_Paper1",
+                    "2019_KS2_Paper1",
+                    "2022_KS2_Paper1",
+                    "2023_KS2_Paper1",
+                    "2024_KS2_Paper1"
+                ]
+            },
+            "Reasoning Papers": {
+                "papers": [
+                    "KS2_Sample_Paper2_Reasoning",
+                    "Sample_KS2_Paper3_Reasoning",
+                    "KS2_2016_Paper2_Reasoning",
+                    "KS2_2016_Paper3_Reasoning",
+                    "KS2_2017_Paper_2_Reasoning",
+                    "KS2_2017_Paper3_Reasoning",
+                    "KS2_2018_Paper2_Reasoning",
+                    "KS2_2018_Paper3_Reasoning",
+                    "KS2_2019_Paper2_Reasoning",
+                    "KS2_2019_Paper3_Reasoning",
+                    "KS2_2022_Paper2_Reasoning",
+                    "KS2_2022_Paper3_Reasoning",
+                    "KS2_2023_Paper2_Reasoning",
+                    "KS2_2023_Paper3_Reasoning",
+                    "KS2_2024_Paper2_Reasoning",
+                    "KS2_2024_Paper3_Reasoning"
+                ]
+            }
+        },
+        "CGP Papers (Made in 2015)": {
+            "CGP Arithmetic Papers": {
+                "papers": [
+                    "KS2_CGP_SetA_2015_Paper1_Arithmetic",
+                    "CGP_Set_B_Paper_1",
+                    "If you need another paper please just email us"
+                ]
+            },
+            "papers": [
+                "CGP Reasoning Papers (please email Tom)"
+            ]
+        },
+        "Twinkl Papers": {
+            "Twinkl Arithmetic Papers": {
+                "papers": [
+                    "KS2_Twinkl_Year6Pack_Arithmetic_Paper1",
+                    "Twinkl_Arithmetic_Paper_2",
+                    "Twinkl_Arithmetic_Paper_3",
+                    "Twinkl_Arithmetic_Paper_4",
+                    "KS2_Twinkle_Y6_Arithmetic_Paper10",
+                    "Twinkl_Y6_Arithmetic_Paper7",
+                    "Twinkl_Y6_Arithmetic_Paper8",
+                    "If you need another paper please just email us"
+                ]
+            },
+            "papers": [
+                "Twinkl Reasoning Papers (please email Tom)"
+            ]
+        },
+        "Rising Stars Papers": {
+            "Rising Stars Arithmetic Papers": {
+                "papers": [
+                    "Rising_Stars_Year6_Autumn2_Arithmetic",
+                    "If you need another paper please just email us"
+                ]
+            },
+            "papers": [
+                "Rising Stars Reasoning Papers (please email Tom)"
+            ]
+        },
+        "PiXL Papers": {
+            "PiXL Arithmetic Papers": {
+                "papers": [
+                    "PiXL_KS2_Spring2019_Paper1",
+                    "PiXL_Year5_Autumn_Paper1",
+                    "PiXL_Year5_Spring_Paper1",
+                    "PiXL_Year4_Autumn_Paper1",
+                    "PiXL_Year4_Spring_Paper1",
+                    "PiXL_Year5_Summer_Paper1"
+                ]
+            },
+            "PiXL Reasoning Papers": {
+                "papers": [
+                    "PiXL_KS2_Spring2019_Paper2",
+                    "PiXL_KS2_Spring2019_Paper3",
+                    "PiXL_Year5_Autumn_Paper2",
+                    "PiXL_Year5_Autumn_Paper3",
+                    "PiXL_Year5_Spring_Paper_2",
+                    "PiXL_Year5_Spring_Paper_3",
+                    "PiXL_Year4_Spring_Paper2",
+                    "PiXL_Year4_Spring_Paper3",
+                    "PiXL_Year4_Summer_Paper2",
+                    "PiXL_Year4_Summer_Paper3",
+                    "PiXL_Year5_Summer_Paper_2",
+                    "PiXL_Year5_Summer_Paper_3"
+                ]
+            }
+        },
+        "NTS Papers": {
+            "papers": [
+                "NTS_Year5_Summer_Paper1"
+            ]
+        },
+        "papers": [
+            "Need any other papers at all - Just Email Tom"
+        ]
+    },
+    "A-Level": {
+        "papers": [
+            "Edexcel_Alevel_P1_2018"
+        ]
+    },
+    "Pearsons ActiveLearn": {
+        "3 Year SOW": {
+            "papers": [
+                "GCSE_Baseline_Test_foundation",
+                "GCSE_Baseline_test_Higher",
+                "GCSE_baseline_test_Access_to_foundation",
+                "Pearson_Y9_Autumn_Foundation",
+                "Pearson_Y9_Autumn_Higher",
+                "Pearson_Y10_Autumn_Foundation",
+                "Pearson_Y10_Autumn_Higher",
+                "PAL_3YearSOW_EoY1_Calc_F",
+                "PAL_3YearSOW_EoY1_Calc_H",
+                "PAL_3YearSOW_EoY1_NonCalc_F",
+                "PAL_3YearSOW_EoY1_NonCalc_H"
+            ]
+        },
+        "KS3": {
+            "Autumn": {
+                "papers": [
+                    "Theta_1_Autumn_Half_Term",
+                    "Bespoke_Pi_1_Autumn_Half_Term",
+                    "Bespoke_Pi_1_Autumn_Half_Term",
+                    "Delta_1_End_of_Autumn_term",
+                    "Theta_1_End_of_Autumn_Term",
+                    "Pi_1_End_of_Autumn_term",
+                    "Delta_1_Spring_Half_term",
+                    "Theta_2_Autumn_half_term",
+                    "Pi_2_Autumn_half_term",
+                    "Delta_2_End_of_Autumn",
+                    "Theta_2_End_of_Autumn_term",
+                    "Pi_2_End_of_Autumn_term"
+                ]
+            },
+            "Spring": {
+                "papers": [
+                    "Delta_1_Spring_Half_Term",
+                    "Theta_1_Spring_Half_Term",
+                    "Pi_1_Spring_Half_Term",
+                    "Delta_1_End_of_Spring_Term",
+                    "Theta_1_End_of_Spring_Term",
+                    "Pi_1_End_of_Spring_Term",
+                    "Delta_2_Spring_Half_term",
+                    "Delta_2_End_of_Spring_term",
+                    "Theta_2_Spring_half_term",
+                    "Theta_2_End_of_Spring_term__2yr_sow_",
+                    "Pi_2_Spring_half_term",
+                    "Pi_2_End_of_Spring_term"
+                ]
+            },
+            "Summer": {
+                "papers": [
+                    "Delta_1_End_of_Year_Test_A",
+                    "Theta_1_End_of_Year_Test_A",
+                    "Pi_1_Summer_Half_Term",
+                    "Pi_1_End_of_Year_Test_A",
+                    "Delta_2_Summer_half_term",
+                    "Theta_1_Summer_half_term",
+                    "Theta_2_End_of_Year_test__2yr_sow",
+                    "Pi_2_Summer_half_term",
+                    "Pi_2_End_of_Year_Test",
+                    "Delta_2_End_of_Year_test",
+                    "Delta_1_EoY_test_A",
+                    "Delta_1_EoY_test_B",
+                    "Delta_2_EoY_test_A",
+                    "Pi_2_EoY_Test_A"
+                ]
+            },
+            "papers": [
+                "KS3_Progress_starter_test",
+                "PAL_KS3_EoY_Pi_1A",
+                "PAL_KS3_EoY_Pi_1B",
+                "PAL_KS3_EoY_Theta_1A",
+                "PAL_KS3_EoY_Theta_1B",
+                "PAL_KS3_EoY_Theta_2A",
+                "PAL_KS3_EoY_Theta_2B"
+            ]
+        }
+    },
+    "AQA KS3 Tests": {
+        "Term 1": {
+            "papers": [
+                "AQA_KS3_Y7main_Term1",
+                "AQA_KS3_Y8main_Term1",
+                "AQA_KS3_Y9main_Term1"
+            ]
+        },
+        "Term 2": {
+            "papers": [
+                "Bespoke_Year_9_Main_Paper_Term_2_NC",
+                "Bespoke_Year_9_Term_2_Extension_C",
+                "Bespoke_Year_8_term_2_main_paper_",
+                "Bespoke_Year_9_Main_Paper_Half_Term_4_NC",
+                "Bespoke_Year_9_Extension_Paper_Half_Term_4_NC"
+            ]
+        },
+        "Term 3": {
+            "papers": [
+                "AQA_Term3_Y7_Core1_NonCalc",
+                "AQA_Term3_Y7_Higher1_NonCalc",
+                "AQA_Term3_Y7_Core2_Calc",
+                "AQA_Term3_Y7_Higher2_Calc",
+                "AQA_Term3_Y8_Core1_NonCalc",
+                "AQA_Term3_Y8_Higher1_NonCalc",
+                "AQA_Term3_Y8_Core2_Calc",
+                "AQA_Term3_Y8_Higher2_Calc",
+                "AQA_Term3_Y9_Core1_NonCalc",
+                "AQA_Term3_Y9_Higher1_NonCalc",
+                "AQA_Term3_Y9_Core2_Calc",
+                "AQA_Term3_Y9_Higher2_Calc"
+            ]
+        },
+        "papers": [
+            "AQA_Y6_Baseline"
+        ]
+    },
+    "GL Assessments": {
+        "papers": [
+            "GL_Familiarisation_Paper_1",
+            "GL_Familiarisation_Paper_2"
+        ]
+    },
+    "Physics": {
+        "papers": [
+            "AQA_Foundation_P2_Specimen_Set2",
+            "AQA_Higher_P2_Specimen_Set2",
+            "AQA_May_2018_Trilogy_Higher_1H"
+        ]
+    },
+    "papers": [
+        "TSA",
+        "Your Bespoke & KS3 Tests"
+    ]
+}

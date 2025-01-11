@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinpoint Learning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* General Body Styling */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #1A1A1A;
+      color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      width: 100%;
+      background-color: #121212;
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    .navbar a {
+      color: #f1f1f1;
+      text-decoration: none;
+      font-size: 18px;
+      margin: 0 20px;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    .navbar a:hover {
+      color: #00aaff;
+    }
+
+    .navbar .menu-toggle {
+      display: none;
+    }
+
+    .navbar a.active {
+      color: #00aaff;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 850px) {
+      .navbar a {
+        display: none;
+        margin: 10px 0;
+      }
+
+      .navbar .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        margin: 0 auto;
+      }
+
+      .navbar.active a {
+        display: block;
+      }
+    }
+
+    /* Home Content */
+    .home-container {
+      margin-top: 80px;
+      background-color: #121212;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 800px;
+
+      max-height: 600px;
+      overflow-y: scroll;
+      scrollbar-color: #1d1d1d #121212;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #ffffff;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+    a{
+      color: white;
+    }
+
+    .card {
+      background-color: #333;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 10px;
+      display: inline-block;
+      width: 23%;
+      text-align: center;
+      color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card h2 {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .card a {
+      color: #00aaff;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      color: #0088cc;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 850px) {
+      .card {
+        width: 45%;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        width: 90%;
+      }
+
+      .navbar {
+        padding: 10px 0;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+    #past-papers {
+      /* Reset */
+      appearance: none;
+      line-height: normal;
+      position: relative;
+      background-position: right 10px top 50%;
+      background-repeat: no-repeat;
+
+      width: 100%;
+      border-radius: 4px;
+      background-color: rgb(18, 18, 18);
+      border: white 1px solid;
+      color: white;
+      text-align: center;
+      padding: 14px;
+      margin-bottom: 20px;
+    }
+
+    #past-papers:focus{
+      outline: none;
+      border: 1px solid white;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      background-color: #00aaff;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      margin-bottom: 12px;
+    }
+    
+    .btn:hover {
+        background-color: #0088cc;
+    }
+
+    table.table.table-bordered {
+        width: 100%;
+
+        thead:nth-child(1) {
+            background-color: #1d1d1d;
+            color: white;
+        }
+        th:nth-child(1) {
+            background-color: #1d1d1d;
+        }
+    }
+
+    div#topics-table a:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+      padding: 10px 0;
+    }
+    div#topics-table{
+      padding: 40px 0;
+      text-align: left;
+    }
+    div#topics-table a{
+      text-decoration: none;
+      background-color: #1d1d1d;
+      padding: 10px 0 10px 5px;
+    }
+
+  </style>
+</head>
+<body role="document">
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <span class="menu-toggle" onclick="toggleNav()">☰</span>
+    <a href="/dashboard" class="active">Home</a>
+    <a href="/upload">Input your test scores</a>
+    <a href="/howto">How To Videos</a>
+    <a href="/contact">Contact</a>
+    <a href="/logout">Log out</a>
+  </nav>
+
+  <!-- Home Content -->
+  <div class="home-container">
+    <h1><b id="name" style="color: #ffffff73;">LOADING...</b></h1>
+    <h2 id="page-content">Please wait.</h2>
+    <div id="score-table"></div><br>
+    <h2>Personalised topics</h2>
+    <div id="topics-table"></div>
+    <h2>Personalised Question Booklet</h2>
+    <button id="download-booklet" class="btn">Download</button>
+    <h2>Solutions</h2>
+    <button id="solutions" class="btn">Not avaiable atm</button>
+  </div>
+
+  <script>
+    const url = new URL(window.location.href);
+
+    // Get the query string parameters
+    const queryParams = new URLSearchParams(url.search);
+
+    function toggleNav() {
+        var navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('active');
+    }
+
+    // Page cache
+    let paper = null;
+    try {
+        console.log(getLocalStorage('paper_cache_' + queryParams.get('id')));
+        paper = JSON.parse(getLocalStorage('paper_cache_' + queryParams.get('id')));
+    } catch (error) {
+        console.error("Invalid JSON:", error);
+    }
+
+    if (paper) {
+        // Show total marks
+        document.querySelector('#page-content').textContent = `Total marks: ${paper.marks}`;
+
+        // Show table
+        document.querySelector('#score-table').innerHTML = `${paper.table}`;
+
+        // Show topics table
+        let i = 0;
+        document.querySelector('#topics-table').innerHTML = '';
+        for (const topic of paper.topics) {
+            const topicValue = document.createElement('a');
+            topicValue.textContent = topic;
+            if (paper.topicLinks[i] !== 'no_video.php'){
+              topicValue.href = paper.topicLinks[i];
+              topicValue.target = '_blank';
+            } else{
+              topicValue.addEventListener('click', () => {
+                alert('No video available for this topic.');
+              });
+
+              topicValue.style.cursor = 'not-allowed';
+            }
+            document.querySelector('#topics-table').appendChild(topicValue);
+            i++;
+        }
+    }
+
+
+    document.getElementById('download-booklet').addEventListener('click', () => {
+        // Disable button
+        document.getElementById('download-booklet').disabled = true;
+        document.getElementById('download-booklet').textContent = 'Downloading from pinpoint servers (this may take a while)...';
+        document.getElementById('download-booklet').style.cursor = 'not-allowed';
+
+        // Download file
+        {
+          const id = queryParams.get('id');
+          const url = '/booklet?paper=' + id;
+
+          // Use Fetch to check if the file request is successful
+          fetch(url)
+            .then(response => {
+              if (response.ok) {
+                // File found, now trigger the download
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = '';  // Optionally set a default filename
+                a.style.display = 'none';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+
+                document.getElementById('download-booklet').disabled = false;
+                document.getElementById('download-booklet').textContent = 'Downloading to your computer (we don\'t know when this is done)...';
+                document.getElementById('download-booklet').style.cursor = 'pointer';
+                
+                // Callback when download starts
+                console.log('Download initiated');
+              } else {
+                console.log('Failed to find the file.');
+              }
+            })
+            .catch(error => console.log('Error during the download request:', error));
+        }
+    });
+
+    // Get the paper name
+    var nameConainer = document.getElementById('name');
+
+    // Temporarily set paper name to the one in the id query
+    nameConainer.textContent = formatPaperStr(queryParams.get('id'));
+
+    // Ping our API to get pinpoint paper infomation
+    fetch('/paper?paper=' + queryParams.get('id'))
+        .then(response => response.json())
+        .then(paper => {
+            setLocalStorage('paper_cache_'+queryParams.get('id'), JSON.stringify(paper), 30);
+            nameConainer.style.color = 'white';
+
+            // Show total marks
+            document.querySelector('#page-content').textContent = `Total marks: ${paper.marks}`;
+
+            // Show table
+            document.querySelector('#score-table').innerHTML = `${paper.table}`;
+
+            // Show topics table
+            let i = 0;
+            document.querySelector('#topics-table').innerHTML = '';
+            for (const topic of paper.topics) {
+                const topicValue = document.createElement('a');
+                topicValue.textContent = topic;
+                if (paper.topicLinks[i] !== 'no_video.php'){
+                  topicValue.href = paper.topicLinks[i];
+                  topicValue.target = '_blank';
+                } else{
+                  topicValue.addEventListener('click', () => {
+                    alert('No video available for this topic.');
+                  });
+
+                  topicValue.style.cursor = 'not-allowed';
+                }
+                document.querySelector('#topics-table').appendChild(topicValue);
+                i++;
+            }
+    })
+    .catch(error => console.error('Error:', error));
+
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = `${name}=${value}; ${expires}; path=/`;
+    }
+
+    function getCookie(name) {
+        const cookieString = document.cookie;
+        const cookies = cookieString.split(';');
+        
+        for (const cookie of cookies) {
+            const [key, ...valueParts] = cookie.trim().split('=');
+            const value = valueParts.join('='); // In case the value contains '='
+
+            if (key === name) {
+                return decodeURIComponent(value); // Decode the cookie value
+            }
+        }
+        
+        return null;
+    }
+
+    function setLocalStorage(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = date.toUTCString();
+        const data = JSON.stringify({ value: value, expires: expires });
+        localStorage.setItem(name, data);
+    }
+    function getLocalStorage(name) {
+        const item = localStorage.getItem(name);
+        if (!item) return null;
+
+        const { value, expires } = JSON.parse(item);
+        const now = new Date();
+
+        return value;
+    }
+
+    function formatPaperStr(input) {
+        str = input
+            .replace(/_/g, ' ')
+            .replace(/(\d)(?=[a-zA-Z])/g, '$1 ')
+            .replace(/([a-zA-Z])(\d)/g, '$1 $2')
+            .replace(/\s+/g, ' ')
+            .trim();
+
+        if (str.charAt(str.length - 2) === ' ') {
+            str = str.slice(0, str.length - 2) + str.slice(str.length - 1);
+        }
+
+        return str;
+    }
+  </script>
+
+</body>
+</html>

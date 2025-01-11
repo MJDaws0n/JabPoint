@@ -20,6 +20,7 @@ $router->addRoute('get', '/login', function() use($routesDir) {
 });
 // Login API
 $router->addRoute('post', '/login', function() use($routesDir) {
+    header('Content-Type: application/json; charset=utf-8');
     // Check if the post data contains 'username' and 'password'
     if (isset($_POST['username']) && isset($_POST['password'])) {
         $username = $_POST['username'];
@@ -68,7 +69,7 @@ $router->addRoute('post', '/login', function() use($routesDir) {
 
         echo json_encode(array("status" => "success"));
     } else {
-        echo json_encode(array("status" => "error", "message" => "An error has occurred. Pinpoint has had an update breaking out system. Please try again later or use the original site."));
+        echo json_encode(array("status" => "error", "message" => "An error has occurred. Pinpoint has had an update breaking our system. Please try again later or use the original site."));
     }
 });
 
@@ -79,6 +80,7 @@ $router->addRoute('get', '/dashboard', function() use($routesDir) {
 
 // API for getting user infomation
 $router->addRoute('get', '/user', function() use($routesDir) {
+    header('Content-Type: application/json; charset=utf-8');
     // Check if the post data contains 'username' and 'password'
     if (isset($_COOKIE['session'])) {
         $session = $_COOKIE['session'];
@@ -114,11 +116,467 @@ $router->addRoute('get', '/user', function() use($routesDir) {
 
     if(strlen($body) === 280) {
         echo json_encode(["status"=> "error","message"=> "Please login"]);
+        return;
     }
 
-    preg_match('/^(.*?)<\/h1>/', substr($body, 3002), $matches);
-    $nameStr = $matches[1];
-    $names = explode(' ', $nameStr);
+    // Suppress libxml errors for invalid HTML as pinpoint has a lot of them
+    libxml_use_internal_errors(true);
 
-    echo json_encode(array("status" => "success", "fname" => ucfirst(strtolower($names[1])), "lname" => ucfirst(strtolower($names[0]))));
+    $dom = new DOMDocument();
+    $dom->loadHTML($body, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+
+    $xpath = new DOMXPath($dom);
+
+    // Names
+    {
+        // XPath query equivalent to the JS selector
+        $query = '//div[@style="background:url(images/bg5.png) !important"]/h1/font';
+        $node = $xpath->query($query)->item(0);
+
+        // Get the text content if the node exists
+        if (!$node) {
+            echo json_encode(["status" => "error", "error" => 'An error has occurred. Pinpoint has had an update breaking our system. Please try again later or use the original site.' ]);
+            return;
+        }
+
+        $nameStr = substr($node->textContent, 4, -1);
+        $names = explode(' ', $nameStr);
+    }
+
+    // Papers
+    {
+        // XPath query to select all <option> elements in the targeted <select>
+        $query = '//select[@onchange="this.form.submit()"][@name="dropdown"]/option';
+
+        $options = $xpath->query($query);
+
+        $paperNames = [];
+        $paperValues = [];
+
+        foreach ($options as $option) {
+            /** @var DOMElement $option */ // <- Stop VSCode crying
+            $paperNames[] = $option->textContent;
+            $paperValues[] = $option->getAttribute('value');
+        }
+    }
+
+    echo json_encode(["status" => "success", "fname" => ucfirst(strtolower($names[1])), "lname" => ucfirst(strtolower($names[0])), "papers" => $paperNames, "paperValues" => $paperValues]);
+});
+
+// API for getting paper information
+$router->addRoute('get', '/paper', function() use($routesDir) {
+    header('Content-Type: application/json; charset=utf-8');
+    // Check if the post data contains 'username' and 'password'
+    if (isset($_COOKIE['session'])) {
+        $session = $_COOKIE['session'];
+    } else {
+        echo json_encode(["status" => "error", "message" => "Invalid session"]);
+        return;
+    }
+
+    // Get paper is set
+    if (isset($_GET['paper'])) {
+        $paper = $_GET['paper'];
+    } else {
+        echo json_encode(["status" => "error", "message" => "Invalid paper"]);
+        return;
+    }
+
+    $url = "https://www.pinpointlearning.co.uk/mainn.php";
+
+    $data = "dropdown=".$paper;
+
+    $options = [
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POSTFIELDS => $data,
+        CURLOPT_POST => true,
+        CURLOPT_HTTPHEADER => [
+            "content-type: application/x-www-form-urlencoded",
+        ],
+        CURLOPT_COOKIE => "PHPSESSID=$session",
+    ];
+    
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 1);
+    curl_setopt_array($ch, $options);
+    $response = curl_exec($ch);
+
+    $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+    $header = substr($response, 0, $header_size);
+    $body = substr($response, $header_size);
+
+    curl_close($ch);
+
+    if(strlen($body) === 280) {
+        echo json_encode(["status"=> "error","message"=> "Please login"]);
+        return;
+    }
+
+    // Suppress libxml errors for invalid HTML as pinpoint has a lot of them
+    libxml_use_internal_errors(true);
+
+    $dom = new DOMDocument();
+    $dom->loadHTML($body, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+
+    $xpath = new DOMXPath($dom);
+
+    // Table thing
+    {
+        $query = '//h2/div[@class="row"]/div[@class="col-md-8"]/table[@class="table table-bordered"]';
+        $node = $xpath->query($query)->item(0);
+
+        // Get the text content if the node exists
+        if (!$node) {
+            echo json_encode(["status" => "error", "error" => 'An error has occurred. Pinpoint has had an update breaking our system. Please try again later or use the original site.' ]);
+            return;
+        }
+
+        $table = $node->C14N();
+    }
+
+    // Total marks
+    {
+        $query = '//h2/div[@class="row"]/div[@class="col-md-8"]/h2';
+
+        $node = $xpath->query($query)->item(0);
+
+        // Get the text content if the node exists
+        if (!$node) {
+            echo json_encode(["status" => "error", "error" => 'An error has occurred. Pinpoint has had an update breaking our system. Please try again later or use the original site.' ]);
+            return;
+        }
+
+        $marks = explode(' ', substr($node->textContent, 72))[0];
+    }
+
+    // Topics
+    {
+        $query = '//h2/div[@class="row"]/div[@class="col-md-8"]/h2/h2/div[@class="list-group"]/a';
+
+        $topicsNodes = $xpath->query($query);
+
+        // Get the text content if the node exists
+        if (!$node) {
+            echo json_encode(["status" => "error", "error" => 'An error has occurred. Pinpoint has had an update breaking our system. Please try again later or use the original site.' ]);
+            return;
+        }
+
+        $topicNames = [];
+        $topicLinks = [];
+
+        foreach ($topicsNodes as $topicsNode) {
+            /** @var DOMElement $topicsNode */ // <- Stop VSCode crying
+            if(preg_replace('/\s+/', ' ', str_replace(["\n", "\r"], '', trim($topicsNode->textContent))) === 'Your Pinpoint Topics And Video Lessons'){
+                continue;
+            }
+            $topicNames[] = preg_replace('/\s+/', ' ', str_replace(["\n", "\r"], '', trim($topicsNode->textContent)));
+            $topicLinks[] = trim($topicsNode->getAttribute('href'));
+        }
+    }
+
+    echo json_encode(["status" => "success", "table" => $table, "marks" => $marks, "topics" => $topicNames, "topicLinks" => $topicLinks]);
+});
+
+// API for downloading personal booklet
+$router->addRoute('get', '/booklet', function() use($routesDir) {
+    header('Content-Type: application/json; charset=utf-8');
+
+
+    // You MUST first ping the paper page as it's the only way
+    if (isset($_COOKIE['session'])) {
+        $session = $_COOKIE['session'];
+    } else {
+        echo json_encode(["status" => "error", "message" => "Invalid session"]);
+        return;
+    }
+
+    // Get paper is set
+    if (isset($_GET['paper'])) {
+        $paper = $_GET['paper'];
+    } else {
+        echo json_encode(["status" => "error", "message" => "Invalid paper"]);
+        return;
+    }
+
+    $url = "https://www.pinpointlearning.co.uk/Questions_newwer.php?slick=1&cc=1&AOtype=AO1";
+
+    $data = "dropdown=".$paper;
+
+    $options = [
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POSTFIELDS => $data,
+        CURLOPT_POST => true,
+        CURLOPT_HTTPHEADER => [
+            "content-type: application/x-www-form-urlencoded",
+        ],
+        CURLOPT_COOKIE => "PHPSESSID=$session",
+    ];
+    
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 1);
+    curl_setopt_array($ch, $options);
+    $response = curl_exec($ch);
+
+    $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+    $header = substr($response, 0, $header_size);
+    $body = substr($response, $header_size);
+
+    curl_close($ch);
+
+    if(strlen($body) === 280) {
+        echo json_encode(["status"=> "error","message"=> "Please login"]);
+        return;
+    }
+
+    // Force download
+    $url = 'https://www.pinpointlearning.co.uk/testpdf_newer.php';
+
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_COOKIE, "PHPSESSID=$session");
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+    $response = curl_exec($ch);
+    curl_close($ch);
+
+    if ($response) {
+        // Set headers to trigger file download in the browser
+        header('Content-Type: application/pdf');
+        header('Content-Disposition: attachment; filename="PinPoint(JabPoint)_paper_'.$paper.'.pdf"');
+        echo $response;
+    } else {
+        echo json_encode(["status" => "error"]);
+    }
+});
+
+// View paper
+$router->addRoute('get', '/paper-view', function() use($routesDir) {
+    include_once $routesDir.'view-paper.html';
+});
+
+// Upload
+$router->addRoute('get', '/upload', function() use($routesDir) {
+    include_once $routesDir.'upload.html';
+});
+// Upload-results
+$router->addRoute('get', '/upload-results', function() use($routesDir) {
+    include_once $routesDir.'upload-results.html';
+});
+// Fetch paper API
+$router->addRoute('get', '/fetch-paper', function() use($routesDir) {
+    header('Content-Type: application/json; charset=utf-8');
+
+
+    // You MUST first ping the paper page as it's the only way
+    if (isset($_COOKIE['session'])) {
+        $session = $_COOKIE['session'];
+    } else {
+        echo json_encode(["status" => "error", "message" => "Invalid session"]);
+        return;
+    }
+
+    // Check paper is set
+    if (isset($_GET['paper'])) {
+        $paper = $_GET['paper'];
+    } else {
+        echo json_encode(["status" => "error", "message" => "Invalid paper"]);
+        return;
+    }
+    // Check date is set
+    if (isset($_GET['date'])) {
+        $date = $_GET['date'];
+    } else {
+        echo json_encode(["status" => "error", "message" => "Invalid date"]);
+        return;
+    }
+    // Check year is set
+    if (isset($_GET['year'])) {
+        $year = $_GET['year'];
+    } else {
+        echo json_encode(["status" => "error", "message" => "Invalid year"]);
+        return;
+    }
+    // Check test type is set
+    if (isset($_GET['test'])) {
+        $test = $_GET['test'];
+    } else {
+        echo json_encode(["status" => "error", "message" => "Invalid test type"]);
+        return;
+    }
+
+    $url = "https://www.pinpointlearning.co.uk/date2.php";
+
+    list($year, $month, $day) = explode("-", $date);
+
+    $data = "dropdown=$year&Formal=$test&day=$day&month=$month&year=$year";
+
+    $options = [
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POSTFIELDS => $data,
+        CURLOPT_POST => true,
+        CURLOPT_HTTPHEADER => [
+            "content-type: application/x-www-form-urlencoded",
+        ],
+        CURLOPT_COOKIE => "PHPSESSID=$session",
+    ];
+    
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 1);
+    curl_setopt_array($ch, $options);
+    $response = curl_exec($ch);
+
+    $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+    $header = substr($response, 0, $header_size);
+    $body = substr($response, $header_size);
+
+    curl_close($ch);
+
+    if(strlen($body) === 280) {
+        echo json_encode(["status"=> "error","message"=> "Please login"]);
+        return;
+    }
+
+    $url = "https://www.pinpointlearning.co.uk/Load.php?resettt=2&yeardbdiff_Load=$paper";
+
+    $options = [
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTPHEADER => [
+            "content-type: application/x-www-form-urlencoded",
+        ],
+        CURLOPT_COOKIE => "PHPSESSID=$session",
+    ];
+    
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 1);
+    curl_setopt_array($ch, $options);
+    $response = curl_exec($ch);
+
+    $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+    $header = substr($response, 0, $header_size);
+    $body = substr($response, $header_size);
+
+    curl_close($ch);
+
+    if(strlen($body) === 280 || curl_getinfo($ch, CURLINFO_HTTP_CODE) === 302) {
+        echo json_encode(["status"=> "error","message"=> "Please login"]);
+        return;
+    }
+
+    // Suppress libxml errors for invalid HTML as pinpoint has a lot of them
+    libxml_use_internal_errors(true);
+
+    $dom = new DOMDocument();
+    $dom->loadHTML($body, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+
+    $xpath = new DOMXPath($dom);
+
+    // Table thing
+    {
+        $query = '//form';
+        $node = $xpath->query($query)->item(0);
+
+        // Get the text content if the node exists
+        if (!$node) {
+            echo json_encode(["status" => "error", "error" => 'An error has occurred. Pinpoint has had an update breaking our system. Please try again later or use the original site.' ]);
+            return;
+        }
+
+        $form = $node->C14N();
+    }
+
+    echo json_encode(["status" => "success", "form" => str_replace("<br></br>", '', str_replace("&#xD;\n", '', str_replace("\t&#xD;\n", '', str_replace('&amp;', '', str_replace('nbsp', '', $form)))))]);
+});
+
+// Upload paper API
+$router->addRoute('post', '/upload-paper', function() use($routesDir) {
+    header('Content-Type: application/json; charset=utf-8');
+
+
+    // You MUST first ping the paper page as it's the only way
+    if (isset($_COOKIE['session'])) {
+        $session = $_COOKIE['session'];
+    } else {
+        echo json_encode(["status" => "error", "message" => "Invalid session"]);
+        return;
+    }
+
+    // Check paper is set
+    if (isset($_GET['Lpaper'])) {
+        $paper = $_GET['Lpaper'];
+    } else {
+        echo json_encode(["status" => "error", "message" => "Invalid paper"]);
+        return;
+    }
+
+    $marks = [];
+
+    // Loop through the $_POST array
+    foreach ($_POST as $key => $value) {
+        if (str_starts_with($key, 'q')) {
+            $marks[] = $key . '=' . $value;
+        }
+    }
+
+    $url = "https://www.pinpointlearning.co.uk/Load.php?resettt=2&yeardbdiff_Load=$paper";
+
+    $data = implode('&', $marks);
+
+    $options = [
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POSTFIELDS => $data,
+        CURLOPT_POST => true,
+        CURLOPT_HTTPHEADER => [
+            "content-type: application/x-www-form-urlencoded",
+        ],
+        CURLOPT_COOKIE => "PHPSESSID=$session",
+    ];
+    
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 1);
+    curl_setopt_array($ch, $options);
+    $response = curl_exec($ch);
+
+    $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+    $header = substr($response, 0, $header_size);
+    $body = substr($response, $header_size);
+
+    curl_close($ch);
+
+    if(strlen($body) === 280) {
+        echo json_encode(["status"=> "error","message"=> "Please login"]);
+        return;
+    }
+
+    // Extract headers into an associative array
+    $headers = [];
+    foreach (explode("\r\n", $header) as $line) {
+        if (strpos($line, ':') !== false) {
+            list($key, $value) = explode(': ', $line, 2);
+            $headers[$key] = $value;
+        }
+    }
+
+    if(curl_getinfo($ch, CURLINFO_HTTP_CODE) === 302 && isset($headers['location']) && $headers['location'] === 'Marks.php'){
+        echo json_encode(["status" => "success", "message" => "Marks uploaded successfully"]);
+    } else{
+        echo json_encode(["status" => "error", "message" => "Maybe failed to upload marks. (Pinpoint is strange)"]);
+    }
 });

@@ -173,17 +173,33 @@
 
       width: 100%;
       border-radius: 4px;
-      height: 30px;
       background-color: rgb(18, 18, 18);
       border: white 1px solid;
       color: white;
       text-align: center;
-      padding: 5px;
+      padding: 14px;
+      margin-bottom: 20px;
     }
 
     #past-papers:focus{
       outline: none;
       border: 1px solid white;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      background-color: #00aaff;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      margin-bottom: 12px;
+    }
+    
+    .btn:hover {
+      background-color: #0088cc;
     }
 
   </style>
@@ -194,22 +210,20 @@
   <nav class="navbar">
     <span class="menu-toggle" onclick="toggleNav()">☰</span>
     <a href="/dashboard" class="active">Home</a>
-    <a href="date2.php">Input your test scores</a>
-    <a href="howtos.php">How To Videos</a>
-    <a href="contacttt.php">Contact</a>
-    <a href="logout2.php">Log out</a>
+    <a href="/upload">Input your test scores</a>
+    <a href="/howto">How To Videos</a>
+    <a href="/contact">Contact</a>
+    <a href="/logout">Log out</a>
   </nav>
 
   <!-- Home Content -->
   <div class="home-container">
     <h1>Hi, <b id="name" style="color: #ffffff73;">LOADING...</b></h1>
     <h2><a href="/upload">Enter paper marks here</a> or choose a past paper to access your personalised questions and solutions.</h2>
-    <select name="past-papers" id="past-papers">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+    <select name="past-papers" id="past-papers" disabled="true">
+        <option id="wait" value="wait">Please wait...</option>
     </select>
+    <button id="review-paper" style="display: none;" class="btn">Review paper</button>
   </div>
 
   <script>
@@ -218,14 +232,126 @@
       navbar.classList.toggle('active');
     }
 
+    // Get the cached user data
+    let user = null;
+    try {
+        user = JSON.parse(getLocalStorage('user_cache'));
+        console.log(user);
+
+        if (user) {
+          document.getElementById('name').innerHTML = user.fname;
+
+          user.papers.forEach((name, index) => {
+              const option = document.createElement('option');
+              option.value = user.paperValues[index];
+              option.textContent = formatPaperStr(name);
+              document.querySelector('#past-papers').appendChild(option);
+          });
+          document.querySelector('#past-papers').disabled = false;
+          document.querySelector('#wait').remove();
+      }
+
+    } catch (error) {
+        console.error("Invalid JSON:", error);
+    }
     // Ping our API to get pinpoint first and last name
     fetch('/user')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('name').textContent = data.fname;
-      document.getElementById('name').style.color = 'white';
+        .then(response => response.json())
+        .then(data => {
+            setLocalStorage('user_cache', JSON.stringify(data), 30);
+            document.getElementById('name').textContent = data.fname;
+            document.getElementById('name').style.color = 'white';
+
+            const storedValue = document.querySelector('#past-papers').value;
+            document.querySelector('#past-papers').innerHTML = '';
+            data.papers.forEach((name, index) => {
+                const option = document.createElement('option');
+                option.value = data.paperValues[index];
+                option.textContent = formatPaperStr(name);
+                document.querySelector('#past-papers').appendChild(option);
+            });
+            document.querySelector('#past-papers').disabled = false;
+            if(document.querySelector('#wait')){
+                document.querySelector('#wait').remove();
+            }
+            if(storedValue){
+                document.querySelector('#past-papers').value = storedValue;
+            }
     })
     .catch(error => console.error('Error:', error));
+
+    document.querySelector('#past-papers').addEventListener('change', (event) => {
+        if(document.querySelector('#past-papers').value !== 'two'){
+            document.querySelector('#review-paper').style.display = 'block';
+        } else{
+            document.querySelector('#review-paper').style.display = 'none';
+        }
+    });
+
+    document.querySelector('#review-paper').addEventListener('click', (event) => {
+        const paper = document.querySelector('#past-papers').value;
+
+        if(paper !== 'two'){
+            window.location.href = `/paper-view/?id=${paper}`;
+        }
+    });
+
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = `${name}=${value}; ${expires}; path=/`;
+    }
+
+    function getCookie(name) {
+        const cookieString = document.cookie;
+        const cookies = cookieString.split(';');
+        
+        for (const cookie of cookies) {
+            const [key, ...valueParts] = cookie.trim().split('=');
+            const value = valueParts.join('='); // In case the value contains '='
+
+            if (key === name) {
+                return decodeURIComponent(value); // Decode the cookie value
+            }
+        }
+        
+        return null;
+    }
+
+    function setLocalStorage(name, value, days) {
+      const date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      const expires = date.toUTCString();
+      const data = JSON.stringify({ value: value, expires: expires });
+      localStorage.setItem(name, data);
+  }
+  function getLocalStorage(name) {
+      const item = localStorage.getItem(name);
+      if (item === null) return null;
+
+      const { value, expires } = JSON.parse(item);
+      const now = new Date();
+
+      return value;
+  }
+
+    function formatPaperStr(input) {
+        str = input
+            .replace(/_/g, ' ')
+            .replace(/(\d)(?=[a-zA-Z])/g, '$1 ')
+            .replace(/([a-zA-Z])(\d)/g, '$1 $2')
+            .replace(/\s+/g, ' ')
+            .trim();
+
+        if (str.charAt(str.length - 2) === ' ') {
+            str = str.slice(0, str.length - 2) + str.slice(str.length - 1);
+        }
+
+        return str;
+    }
+
+
   </script>
 
 </body>
