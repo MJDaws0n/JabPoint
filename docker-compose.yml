@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: jabpoint
     ports:
-      - "3000:80" # Map port 8080 on host to port 80 in the container
+      - "3000:80" # Map port 3000 on host to port 80 in the container
     volumes:
       - .:/var/www/html # Mount the current directory to the container's web root
     environment:
